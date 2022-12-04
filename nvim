@@ -18,6 +18,10 @@ set incsearch
 set scrolloff=8
 set colorcolumn=80
 set signcolumn=yes
+set clipboard=unnamedplus,unnamed
+set spell
+
+:let mapleader = "\<Space>"
 
 call plug#begin('~/.vim/plugged')
    Plug 'vim-airline/vim-airline' " Bottom vim bar
@@ -31,11 +35,17 @@ call plug#begin('~/.vim/plugged')
    Plug 'airblade/vim-gitgutter' " Git diff
    " CoC Being
    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-   Plug 'SirVer/ultisnips'
    Plug 'iamcco/coc-spell-checker'
-   Plug 'mlaursen/vim-react-snippets'
    " Coc End
+   Plug 'nvim-lua/plenary.nvim'
+   Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+   Plug 'gruvbox-community/gruvbox'
+   Plug 'tpope/vim-fugitive'
 call plug#end()
+
+colorscheme gruvbox
+highlight Normal ctermbg=None
+highlight Normal guibg=None
 
 let g:coc_global_extensions = [
             \       'coc-emmet', 
@@ -57,6 +67,12 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="-"
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " From CoC Documentation
 " Use tab for trigger completion with characters ahead and navigate.
