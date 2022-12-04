@@ -24,3 +24,9 @@ eval "$(zoxide init zsh)"
 
 
 alias cd="z"
+alias zshcfg="nvim ~/.zshrc"
+alias nvimcfg="nvim ~/.config/nvim/init.vim"
+alias alacfg="nvim ~/.config/alacritty/alacritty.yml"
+alias pgadmin='docker run -d --name pgadmin --network="host" -e PGADMIN_DEFAULT_EMAIL="s@s.com" -e PGADMIN_DEFAULT_PASSWORD="pass" dpage/pgadmin4'
+alias tmuxcfg="nvim ~/.config/tmux/tmux.conf"
+alias home="cd ~"
