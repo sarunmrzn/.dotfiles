@@ -3,20 +3,20 @@ window:
     x: 4
   opacity: 0.8
   dynamic_title: true
-  startup_mode: Fullscreen
-
-scrolling:
-  # Specifying '0' will disable scrolling.
-  history: 100000
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
-  multiplier: 3
+  startup_mode: Windowed
+  decorations: None
+# scrolling:
+#   # Specifying '0' will disable scrolling.
+#   history: 100000
+#   # Number of lines the viewport will move for every line scrolled when
+#   # scrollback is enabled (history > 0).
+#   multiplier: 3
 
 font:
   normal:
     family: "SFMono Nerd Font Mono"
     style: Regular
-  size: 14
+  size: 12
   AppleFontSmoothing: default
 
 draw_bold_text_with_bright_colors: true
