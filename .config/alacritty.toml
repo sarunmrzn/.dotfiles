@@ -1,0 +1,32 @@
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard= true
+semantic_escape_chars= ",│`|:\"' ()[]{}<>\t"
+
+[window]
+padding = {x = 0, y = 0}
+dynamic_padding = true
+decorations = "None"
+startup_mode = "Maximized"
+opacity = 1
+blur = true
+
+[cursor]
+style = {shape = "Block", blinking = "Off"}
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
