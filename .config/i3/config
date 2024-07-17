@@ -1,0 +1,177 @@
+# Font and Modifier Key
+font pango:Fira Mono 8
+set $mod Mod4
+
+# i3status refresh command
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# Workspace Definitions
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Autostart Applications
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id redshift
+exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
+exec_always setxkbmap -option caps:escape
+exec_always xcape -e 'Caps_Lock=Escape'
+exec_always xset r rate 250 50
+exec_always picom -f
+exec_always feh --bg-fill ~/Pictures/Wallpapers/gruvbox/irl/forest-mountain-cloudy-valley.png
+
+# Floating Modifier
+floating_modifier $mod
+
+# Application Rules - Assigning Applications to Workspaces
+for_window [class="Alacritty"] move to workspace $ws1
+for_window [class="firefox"] move to workspace $ws2
+for_window [class="chrome"] move to workspace $ws2
+for_window [instance="thunar"] move to workspace $ws2
+for_window [instance="postman"] move to workspace $ws3
+for_window [class="DBeaver"] move to workspace $ws3
+for_window [class="MongoDB Compass"] move to workspace $ws3
+for_window [instance="insomnia"] move to workspace $ws3
+for_window [class="discord"] move to workspace $ws4
+for_window [instance="slack"] move to workspace $ws4
+for_window [instance="teams"] move to workspace $ws4
+for_window [class="Spotify"] move to workspace $ws5
+for_window [class="Stremio"] move to workspace $ws6
+for_window [class="obsidian"] move to workspace $ws7
+
+# Window Border Settings
+default_border none
+default_floating_border none
+
+# Colors - Gruvbox Dark Theme
+set $background #282828
+set $indicator  #3c3836
+set $text       #b8bb26
+set $itext      #ebdbb2
+set $urgent     #fb4934
+# Bar Configuration
+bar {
+    bindsym button1 nop
+    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+    position bottom
+    workspace_buttons yes
+    i3bar_command i3bar --transparency
+    # tray_output none
+
+    colors {
+        background $background
+        separator  $indicator
+
+        focused_workspace  $background $background $text
+        inactive_workspace $indicator $indicator $itext
+        urgent_workspace   $urgent $urgent $text 
+    }
+}
+
+# Client (Window) Colors
+client.focused     $indicator $background $text $indicator
+client.unfocused   $background $background $itext $background
+client.focused_inactive $urgent $background $text $indicator
+client.urgent $indicator $background $text $background
+
+# System Commands
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# App Launch Shortcuts
+bindsym $mod+d exec "dmenu_run -nf '#83a598' -nb '#282828' -sb '#3c3836' -sf '#b8bb26' -fn 'Source Code Pro:size=8' -p 'run: '"
+bindsym $mod+Return exec alacritty
+bindsym $mod+b exec firefox
+bindsym $mod+Shift+s exec flameshot gui
+bindsym Print exec flameshot full -p ~/Screenshots
+
+# Window Management
+bindsym $mod+Shift+q kill
+bindsym $mod+x exec ~/.config/scripts/lock.sh
+
+# Volume Control
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Brightness Control
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86KbdBrightnessUp exec light -A 5 /sysfs/leds/phy0-led/brightness
+bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
+
+
+# Directional Focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# Directional Move
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# Fullscreen Toggle
+bindsym $mod+f fullscreen toggle
+
+# Layout Controls
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Floating Toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# Workspace Switching
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Workspace Container Movement
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Resize Mode
+mode "resize" {
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"

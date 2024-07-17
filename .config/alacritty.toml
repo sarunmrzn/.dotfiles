@@ -1,0 +1,53 @@
+[colors.primary]
+background = '#282828'  # Gruvbox background
+foreground = '#ebdbb2'  # Gruvbox foreground
+
+[colors.normal]
+black   = '#3c3836'     # Gruvbox dark gray
+red     = '#fb4934'     # Gruvbox red
+green   = '#b8bb26'     # Gruvbox green
+yellow  = '#fabd2f'     # Gruvbox yellow
+blue    = '#83a598'     # Gruvbox blue
+magenta = '#d3869b'     # Gruvbox purple
+cyan    = '#8ec07c'     # Gruvbox aqua
+white   = '#ebdbb2'     # Gruvbox light tan
+
+[colors.bright]
+black   = '#665c54'     # Bright black
+red     = '#fb4934'     # Bright red
+green   = '#b8bb26'     # Bright green
+yellow  = '#fabd2f'     # Bright yellow
+blue    = '#83a598'     # Bright blue
+magenta = '#d3869b'     # Bright purple
+cyan    = '#8ec07c'     # Bright aqua
+white   = '#fbf1c7'     # Gruvbox light white
+
+[font]
+size = 8
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\\t"
+
+[window]
+padding = {x = 0, y = 0}
+dynamic_padding = true
+decorations = "None"
+startup_mode = "Maximized"
+opacity = 1
+blur = true
+
+[cursor]
+style = {shape = "Block", blinking = "Off"}
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
+
