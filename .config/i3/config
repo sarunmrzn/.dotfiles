@@ -23,7 +23,7 @@ exec --no-startup-id redshift
 exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id xcape -e 'Caps_Lock=Escape'
 exec_always --no-startup-id xset r rate 250 30
-exec_always --no-startup-id feh --bg-scale ~/Downloads/w.png
+exec_always --no-startup-id feh --bg-scale ~/Downloads/k.png
 
 
 ########## CONFIGURATION ##########
@@ -32,12 +32,18 @@ floating_modifier $mod
 
 # Workspace assignment
 assign [class="Alacritty"] 1
-assign [instance="postman"] 1
-assign [class="DBeaver"] 1
-assign [class="MongoDB Compass"] 1
+
 assign [class="chrome"] 2
-assign [class="obsidian"] 3
-assign [class="discord"] 3
+assign [class="obsidian"] 2
+assign [instance="thunar"] 2
+
+assign [instance="postman"] 3
+assign [class="DBeaver"] 3
+assign [class="MongoDB Compass"] 3
+
+assign [class="discord"] 4
+assign [instance="slack"] 4
+assign [instance="teams"] 4
 
 
 ########## UI & Colors ##########
