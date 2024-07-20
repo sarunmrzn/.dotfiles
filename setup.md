@@ -8,6 +8,17 @@
     sudo archlinux-keyring
 ```
 
+### WIFI
+
+```bash
+    systemctl start iwd
+    iwctl
+    station list
+    station wlan0 scan
+    station wlan0 get-networks
+    station wlan0 connect 'Network'
+```
+
 ### Yay
 
 ```bash
@@ -15,6 +26,7 @@
     cd yay
     makepkg -si
 ```
+
 
 ### Packages
 
@@ -62,46 +74,98 @@
         tmuxinator
         unzip
         xclip
+        slack-bin
+        docker
+        docker-compose
+        powertop
+        auto-cpufreq
+        thunar
 ```
 
-### Fisher & NVM
+### Docker stuff
+```bash
+    systemctl start docker.service
+    docker ps
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    newgrp docker
+
+```
+
+### Powertop
+```
+    [Unit]
+    Description=Powertop tunings
+
+    [Service]
+    Type=oneshot
+    RemainAfterExit=yes
+    ExecStart=/usr/bin/powertop --auto-tune
+
+    [Install]
+    WantedBy=multi-user.target
+```
 
 ```bash
-    curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+    sudo nvim /etc/systemd/system/powertop.service
+    systemctl enable powertop.service
+    systemctl start powertop.service
 
-    fisher install jorgebucaran/nvm.fish
-    nvm install lts
-    npm i -g yarn prettier
-    set --universal nvm_default_version 20
+```
 
+### Ble
+```bash
+    git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+    make -C ble.sh install PREFIX=~/.local
+
+```
+
+### NVM
+```bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    nvm install 20
+    npm i -g yarn
+    npm i -g eslint_d
+    npm install -g @fsouza/prettierd
 ```
 
 ### Git Configuration
 
 ```bash
-    ssh-keygen -t ed25519 -C "sarunmrzn@gmail.com"
+    ssh-keygen -t ed25519 -C "<email>"
     eval "$(ssh-agent -s)" / wsl : eval $(ssh-agent -c)
-    ssh-add ~/.ssh/sarun
+    ssh-add ~/.ssh/xxx
+
     touch ~/.ssh/config
     nvim ~/.ssh/config
 
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/sarun
-    IdentitiesOnly yes
+    Host github.com
+        User git
+        IdentityFile ~/.ssh/xxx
+        IdentitiesOnly yes
 
-    git config --global user.name "Sarun Maharjan"
-    git config --global user.email "sarunmrzn@gmail.com"
+    Host xxx
+        User git
+        Hostname xxx
+        IdentityFile ~/.ssh/xxx
+        IdentitiesOnly yes
+
+    git config --global user.name "<name>"
+    git config --global user.email "<email>"
 
 ```
 
 ### Link dotfiles to home
 
 ```bash
+rm -rf ~/.config
+rm -rf ~/.bashrc
+
 ln -s ~/.dotfiles/.config ~/
 ln -s ~/.dotfiles/.fonts ~/
 sudo fc-cache -f -v
 ln -s ~/.dotfiles/.tmux.conf ~/
+ln -s ~/.dotfiles/.bashrc ~/
 ```
 
 ### TPM
@@ -161,13 +225,10 @@ Location: `~/.Xresources`
 ```
 ````
 
-### WIFI
+### Fonts
+```bash
+    yay -S ttf-ms-win11-auto
+    fc-cache --force
+    fc-cache-32 --force
+```
 
-```
-systemctl start iwd
-iwctl
-station list
-station wlan0 scan
-station wlan0 get-networks
-station wlan0 connect 'Network'
-```
