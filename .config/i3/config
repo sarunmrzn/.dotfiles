@@ -50,15 +50,6 @@ assign [instance="teams"] 4
 default_border none
 default_floating_border none
 
-# https://thomashunter.name/i3-configurator/
-# class                 border    bground  text      indicator child_border
-client.focused          '#504945' '#282828' '#EBDBB2' '#83A598' '#282828'
-client.focused_inactive '#504945' '#282828' '#928374' '#282828' '#282828'
-client.unfocused        '#504945' '#282828' '#928374' '#282828' '#282828'
-client.urgent           '#504945' '#282828' '#FB4934' '#282828' '#282828'
-client.placeholder      '#504945' '#282828' '#504945' '#282828' '#282828'
-client.background       '#282828'
-
 ########## KEYBINDS ##########
 # i3 config
 bindsym $mod+Shift+c reload
@@ -66,7 +57,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Applications
-bindsym $mod+d exec "dmenu_run -nf '#ebdbb2' -nb '#282828' -sb '#504945' -sf '#fbf1c7' -fn 'Noto Sans Mono:size=10' -p 'run: '"
+bindsym $mod+d exec "dmenu_run -nf '#ebdbb2' -nb '#282828' -sb '#504945' -sf '#fbf1c7' -fn 'Noto Sans Mono:size=8' -p 'run: '"
 bindsym $mod+Return exec alacritty
 bindsym $mod+b exec google-chrome-stable
 bindsym $mod+Shift+s exec flameshot gui
