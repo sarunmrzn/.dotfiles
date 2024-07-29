@@ -21,3 +21,5 @@ alias mirror="~/.dotfiles/.screenlayouts/dual-mirror.sh"
 . "$HOME/.cargo/env"
 
 source ~/.local/share/blesh/ble.sh
+
+export EDITOR='nvim'

@@ -32,14 +32,15 @@ floating_modifier $mod
 
 # Workspace assignment
 assign [class="Alacritty"] 1
+assign [class="DBeaver"] 1
+assign [class="MongoDB Compass"] 1
 
 assign [class="chrome"] 2
-assign [class="obsidian"] 2
 assign [instance="thunar"] 2
 
 assign [instance="postman"] 3
-assign [class="DBeaver"] 3
-assign [class="MongoDB Compass"] 3
+assign [instance="insomnia"] 3
+assign [class="obsidian"] 3
 
 assign [class="discord"] 4
 assign [instance="slack"] 4
