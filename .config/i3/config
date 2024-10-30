@@ -53,7 +53,7 @@ default_border none
 default_floating_border none
 
 # Colors - Tokyo Night Theme
-set $background #1a1b26
+set $background #1a1b2600
 set $indicator  #414868
 set $text       #7aa2f7
 set $itext      #c0caf5
