@@ -11,7 +11,6 @@ ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(z git zsh-autosuggestions zsh-syntax-highlighting)
-alias cd=z
 
 source $ZSH/oh-my-zsh.sh
 
