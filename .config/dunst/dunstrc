@@ -3,12 +3,11 @@
     padding = 8
     sort = true
     icon_position = "left"
-
-    # Colors for Gruvbox Dark
-    background = "#282828"      # Dark background color
-    foreground = "#ebdbb2"      # Light text color
-    frame_color = "#3c3836"     # Frame color for separation
+    background = "#282828"
+    foreground = "#ebdbb2"
+    frame_color = "#3c3836"
 
 [skip-rule] 
     appname=Spotify
     skip_display=true
+

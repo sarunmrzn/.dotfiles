@@ -51,12 +51,13 @@ for_window [class="obsidian"] move to workspace $ws7
 default_border none
 default_floating_border none
 
-# Colors - Gruvbox Dark Theme
-set $background #282828
-set $indicator  #3c3836
-set $text       #b8bb26
-set $itext      #ebdbb2
-set $urgent     #fb4934
+# Colors - Tokyo Night Theme
+set $background #1a1b26
+set $indicator  #414868
+set $text       #7aa2f7
+set $itext      #c0caf5
+set $urgent     #f7768e
+
 # Bar Configuration
 bar {
     bindsym button1 nop
@@ -64,7 +65,6 @@ bar {
     position bottom
     workspace_buttons yes
     i3bar_command i3bar --transparency
-    # tray_output none
 
     colors {
         background $background
@@ -88,7 +88,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # App Launch Shortcuts
-bindsym $mod+d exec "dmenu_run -nf '#83a598' -nb '#282828' -sb '#3c3836' -sf '#b8bb26' -fn 'Source Code Pro:size=8' -p 'run: '"
+bindsym $mod+d exec "dmenu_run -nf '#c0caf5' -nb '#1a1b26' -sb '#414868' -sf '#7aa2f7' -fn 'Source Code Pro:size=8' -p 'run: '"
 bindsym $mod+Return exec alacritty
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+s exec flameshot gui

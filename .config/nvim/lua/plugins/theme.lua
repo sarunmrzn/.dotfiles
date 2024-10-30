@@ -1,10 +1,17 @@
 return {
   {
     -- :Telescope colorscheme for picking colorscheme
-    'ellisonleao/gruvbox.nvim',
+    'folke/tokyonight.nvim',
     priority = 1000,
     init = function()
-      vim.cmd.colorscheme 'gruvbox'
+      require('tokyonight').setup {
+        transparent = true,
+        styles = {
+          sidebars = 'transparent',
+          floats = 'transparent',
+        },
+      }
+      vim.cmd.colorscheme 'tokyonight-night'
       vim.cmd.hi 'Comment gui=none'
     end,
   },
