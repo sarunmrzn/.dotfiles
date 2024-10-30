@@ -77,6 +77,7 @@ packages=(
     spotify
     ttf-jetbrains-mono-nerd
     ttf-sourcecodepro-nerd
+    ttf-iosevka
 )
 
 echo "Updating system..."

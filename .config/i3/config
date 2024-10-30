@@ -1,5 +1,5 @@
 # Font and Modifier Key
-font pango:SourceCodeVF 10
+font pango:Iosevka 10
 set $mod Mod4
 
 # i3status refresh command
