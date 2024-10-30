@@ -194,11 +194,16 @@ echo "Xft.dpi: 125" >> ~/.Xresources
 echo "Setting permissions for light..."
 sudo chmod +s /usr/bin/light
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 echo "Cloning zsh plugins..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 echo "Enabling sysstat..."
 sudo systemctl enable --now sysstat
+
+xdg-user-dirs-update
+
 
 echo "Setup complete! Please restart your terminal."
