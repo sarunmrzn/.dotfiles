@@ -12,9 +12,26 @@ return {
     popup_border_style = 'rounded',
     enable_git_status = true,
     enable_diagnostics = true,
-    open_files_do_not_replace_types = { 'terminal', 'trouble', 'qf' },
+    pen_files_do_not_replace_types = { 'terminal', 'trouble', 'qf' },
     sort_case_insensitive = false,
-    sort_function = nil,
+    sort_function = function(a, b)
+        -- Ensure directories come before files
+        if a.type ~= b.type then
+            return a.type < b.type
+        end
+
+        -- Apply natural sorting only to folders starting with "v" followed by a number
+        local a_name = a.path:match("v(%d+)")
+        local b_name = b.path:match("v(%d+)")
+
+        if a_name and b_name then
+            -- Convert extracted numbers to integers for numeric comparison
+            return tonumber(a_name) < tonumber(b_name)
+        else
+            -- Default sorting behavior if the name pattern does not match
+            return a.path < b.path
+        end
+    end,
     default_component_configs = {
       container = {
         enable_character_fade = true,
