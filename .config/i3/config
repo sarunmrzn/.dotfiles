@@ -46,14 +46,14 @@ for_window [instance="teams"] move to workspace $ws4
 for_window [class="obsidian"] move to workspace $ws5
 for_window [class="Steam"] move to workspace $ws6
 for_window [class="Stremio"] move to workspace $ws7
-for_window [class="Spotify"] move to workspace $ws0
+for_window [class="Spotify"] move to workspace $ws10
 
 # Window Border Settings
 default_border none
 default_floating_border none
 
 # Colors - Tokyo Night Theme
-set $background #1a1b2600
+set $background #1a1b26
 set $indicator  #414868
 set $text       #7aa2f7
 set $itext      #c0caf5
@@ -65,7 +65,7 @@ bar {
     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
     position bottom
     workspace_buttons yes
-    i3bar_command i3bar --transparency
+    # i3bar_command i3bar --transparency
 
     colors {
         background $background
