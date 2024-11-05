@@ -16,9 +16,9 @@ vim.g.tmux_navigator_no_mappings = 1
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require 'sarun.set'
-require 'sarun.remap'
-require 'sarun.autocmd'
+require 'set'
+require 'remap'
+require 'autocmd'
 
 require('lazy').setup {
   require 'plugins.lazydev',
