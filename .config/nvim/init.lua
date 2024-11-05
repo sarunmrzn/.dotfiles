@@ -1,9 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-vim.g.have_nerd_font = true
-vim.g.tmux_navigator_no_mappings = 1
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -15,6 +9,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+vim.g.have_nerd_font = true
+vim.g.tmux_navigator_no_mappings = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 require 'sarun.set'
 require 'sarun.remap'
