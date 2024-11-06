@@ -32,6 +32,7 @@ alias mux='tmuxinator'
 
 alias dot='nvim ~/.dotfiles/'
 alias ncfg='nvim ~/.dotfiles/.config/nvim/'
+alias notes='nvim ~/Notes/Scratchpad.md'
 
 alias pb='mux start pb'
 alias cango='mux start cango'
