@@ -11,8 +11,6 @@ keymap('n', '<C-l>', '<C-w><C-l>', opts)
 keymap('n', '<C-j>', '<C-w><C-j>', opts)
 keymap('n', '<C-k>', '<C-w><C-k>', opts)
 
-keymap("n", "<leader>e", ":Neotree toggle<cr>", opts)
-
 keymap('n', '<C-Up>', ':resize -2<CR>', opts)
 keymap('n', '<C-Down>', ':resize +2<CR>', opts)
 keymap('n', '<C-Left>', ':vertical resize -2<CR>', opts)

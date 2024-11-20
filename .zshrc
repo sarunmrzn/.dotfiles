@@ -30,9 +30,9 @@ export NVM_DIR="$HOME/.nvm"
 
 alias mux='tmuxinator'
 
-alias dot='nvim ~/.dotfiles/'
-alias ncfg='nvim ~/.dotfiles/.config/nvim/'
-alias notes='nvim ~/Notes/Scratchpad.md'
+alias dot='cd ~/.dotfiles && nvim'
+alias ncfg='cd ~/.dotfiles/.config/nvim && nvim'
+alias notes='cd ~/Notes/Scratchpad.md && nvim'
 
 alias pb='mux start pb'
 alias cango='mux start cango'
