@@ -10,7 +10,7 @@ ENABLE_CORRECTION="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(z git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(z zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
