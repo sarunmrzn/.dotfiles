@@ -25,6 +25,10 @@ return {
         'sql',
         'typescript',
         'yaml',
+        'comment',
+        'tsx',
+        'jsdoc',
+        'regex',
       },
       auto_install = true,
       highlight = {
