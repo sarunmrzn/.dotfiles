@@ -1,5 +1,5 @@
 [colors.primary]
-background = '#1a1b26'
+background = '#000000'
 foreground = '#c0caf5'
 
 [colors.normal]
@@ -41,7 +41,7 @@ padding = {x = 0, y = 0}
 dynamic_padding = true
 decorations = "None"
 startup_mode = "Maximized"
-opacity = 0
+opacity = 1
 blur = true
 
 [cursor]

@@ -3,7 +3,7 @@
     padding = 8
     sort = true
     icon_position = "left"
-    background = "#1a1b26"  ; Tokyo Night background color
+    background = "#000000"  ; Tokyo Night background color
     foreground = "#bbc2cf"  ; Tokyo Night foreground color
     frame_color = "#3b4252"  ; Frame color for the theme
 
