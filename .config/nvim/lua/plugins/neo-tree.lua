@@ -16,7 +16,7 @@ return {
   },
   config = function()
     require('neo-tree').setup {
-
+      use_libuv_file_watcher = true,
       filesystem = {
         window = {
           mappings = {
