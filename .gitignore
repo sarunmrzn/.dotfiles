@@ -38,6 +38,8 @@
 
 !.config/nvim-old
 
+!.config/nvim-k-old
+
 !.config/alacritty
 
 !.config/alacritty.toml
