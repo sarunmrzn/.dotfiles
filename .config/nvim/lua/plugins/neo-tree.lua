@@ -30,11 +30,6 @@ return {
         return a.path < b.path
       end
     end,
-    window = {
-      mappings = {
-        ['h'] = 'close_node',
-      },
-    },
     filesystem = {
       filtered_items = {
         hide_dotfiles = false,
