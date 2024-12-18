@@ -91,7 +91,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # App Launch Shortcuts
 bindsym $mod+d exec "dmenu_run -nf '#c0caf5' -nb '#000000' -sb '#414868' -sf '#7aa2f7' -fn 'Fira Mono:size=10' -p 'run: '"
 bindsym $mod+Return exec alacritty
-bindsym $mod+b exec firefox
+bindsym $mod+b exec google-chrome-stable
 bindsym $mod+Shift+s exec flameshot gui
 bindsym Print exec flameshot full -p ~/Screenshots
 
