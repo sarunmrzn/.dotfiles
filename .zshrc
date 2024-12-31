@@ -30,10 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias mux='tmuxinator'
 
-alias dot='nvim ~/.dotfiles/'
-alias ncfg='nvim ~/.dotfiles/.config/nvim/'
-alias notes='nvim ~/Notes/Scratchpad.md'
-
+alias dot='mux start dot'
 alias pb='mux start pb'
 alias cango='mux start cango'
 alias hltr='mux start hltr'
@@ -46,3 +43,4 @@ alias mirror="~/.dotfiles/.screenlayouts/dual-mirror.sh"
 . "$HOME/.cargo/env"
 eval 
 TWILIO_AC_ZSH_SETUP_PATH=/home/sarun/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
+
