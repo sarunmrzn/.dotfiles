@@ -177,7 +177,6 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -189,6 +188,21 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        azure_pipelines_ls = {},
+        clangd = {},
+        tailwindcss = {},
+        cssls = {},
+        docker_compose_language_service = {},
+        dockerls = {},
+        emmet_ls = {},
+        graphql = {},
+        glint = {},
+        html = {},
+        jsonls = {},
+        vale_ls = {},
+        sqlls = {},
+        harper_ls = {},
+        yamlls = {},
 
         lua_ls = {
           -- cmd = { ... },
