@@ -41,4 +41,4 @@ vim.opt.breakindent = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
-vim.opt.laststatus = 0
+-- vim.opt.laststatus = 0
