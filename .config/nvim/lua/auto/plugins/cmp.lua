@@ -44,8 +44,23 @@ return {
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-y>'] = cmp.mapping.confirm { select = true },
 
+          -- Manually trigger a completion from nvim-cmp.
+          --  Generally you don't need this, because nvim-cmp will display
+          --  completions whenever it has completion options available.
           ['<C-Space>'] = cmp.mapping.complete {},
 
+          -- If you prefer more traditional completion keymaps,
+          -- you can uncomment the following lines
+          --['<CR>'] = cmp.mapping.confirm { select = true },
+          --['<Tab>'] = cmp.mapping.select_next_item(),
+          --['<S-Tab>'] = cmp.mapping.select_prev_item(),
+
+          -- Think of <c-l> as moving to the right of your snippet expansion.
+          --  So if you have a snippet that's like:
+          --  function $name($args)
+          --    $body
+          --  end
+          --
           -- <c-l> will move you to the right of each of the expansion locations.
           -- <c-h> is similar, except moving you backwards.
           ['<C-l>'] = cmp.mapping(function()
@@ -62,6 +77,7 @@ return {
         sources = {
           {
             name = 'lazydev',
+            -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
             group_index = 0,
           },
           { name = 'nvim_lsp' },
@@ -72,3 +88,4 @@ return {
     end,
   },
 }
+-- vim: ts=2 sts=2 sw=2 et
