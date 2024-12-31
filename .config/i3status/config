@@ -1,9 +1,9 @@
 general {
   output_format = "i3bar"
   colors = true
-  color_good = "#b8bb26"        # Gruvbox green
-  color_degraded = "#fabd2f"    # Gruvbox yellow
-  color_bad = "#fb4934"         # Gruvbox red
+  color_good = "#b0b0b0"        # Light gray for good status
+  color_degraded = "#888888"    # Medium gray for degraded status
+  color_bad = "#616161"         # Dark gray for bad status
   interval = 5
 }
 
@@ -52,6 +52,6 @@ disk "/" {
 }
 
 tztime local {
-  format = "%Y-%m-%d %I:%M"
+  format = "%A, %B %d, %Y %I:%M %p"   # Full date and time format (e.g., "Monday, January 01, 2025 12:30 PM")
 }
 

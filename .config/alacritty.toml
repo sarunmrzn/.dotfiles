@@ -1,26 +1,26 @@
 [colors.primary]
-background = '#000000'
-foreground = '#c0caf5'
+background = '#121212'  # Very dark gray background
+foreground = '#b0b0b0'  # Light gray for foreground
 
 [colors.normal]
-black   = '#414868'
-red     = '#f7768e'
-green   = '#9ece6a'
-yellow  = '#e0af68'
-blue    = '#7aa2f7'
-magenta = '#bb9af7'
-cyan    = '#7dcfff'
-white   = '#c0caf5'
+black   = '#212121'  # Dark gray for black
+red     = '#616161'  # Medium dark gray for red
+green   = '#808080'  # Medium gray for green
+yellow  = '#a0a0a0'  # Light gray for yellow
+blue    = '#b0b0b0'  # Light gray for blue
+magenta = '#b0b0b0'  # Light gray for magenta
+cyan    = '#b0b0b0'  # Light gray for cyan
+white   = '#b0b0b0'  # Light gray for white
 
 [colors.bright]
-black   = '#565f89'
-red     = '#f7768e'
-green   = '#9ece6a'
-yellow  = '#e0af68'
-blue    = '#7aa2f7'
-magenta = '#bb9af7'
-cyan    = '#7dcfff'
-white   = '#a9b1d6'
+black   = '#565f89'  # Darker gray for bright black
+red     = '#616161'  # Medium dark gray for bright red
+green   = '#808080'  # Medium gray for bright green
+yellow  = '#a0a0a0'  # Light gray for bright yellow
+blue    = '#b0b0b0'  # Light gray for bright blue
+magenta = '#b0b0b0'  # Light gray for bright magenta
+cyan    = '#b0b0b0'  # Light gray for bright cyan
+white   = '#d0d0d0'  # Very light gray for bright white
 
 [font]
 size = 14

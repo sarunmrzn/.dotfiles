@@ -3,11 +3,11 @@
     padding = 8
     sort = true
     icon_position = "left"
-    background = "#000000"  ; Tokyo Night background color
-    foreground = "#bbc2cf"  ; Tokyo Night foreground color
-    frame_color = "#3b4252"  ; Frame color for the theme
+    background = "#121212"  ; Dark gray background
+    foreground = "#b0b0b0"  ; Light gray text
+    frame_color = "#616161"  ; Medium gray frame color
 
-[skip-rule] 
+[skip-rule]
     appname=Spotify
     skip_display=true
 

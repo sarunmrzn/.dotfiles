@@ -53,11 +53,11 @@ default_border none
 default_floating_border none
 
 # Colors - Tokyo Night Theme
-set $background #000000
-set $indicator  #414868
-set $text       #7aa2f7
-set $itext      #c0caf5
-set $urgent     #f7768e
+set $background #121212
+set $indicator  #616161
+set $text       #b0b0b0
+set $itext      #e0e0e0
+set $urgent     #ff6666
 
 # Bar Configuration
 bar {
@@ -89,7 +89,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # App Launch Shortcuts
-bindsym $mod+d exec "dmenu_run -nf '#c0caf5' -nb '#000000' -sb '#414868' -sf '#7aa2f7' -fn 'Fira Mono:size=10' -p 'run: '"
+bindsym $mod+d exec "dmenu_run -nf '#e0e0e0' -nb '#121212' -sb '#616161' -sf '#b0b0b0' -fn 'Fira Mono:size=10' -p 'run: '"
 bindsym $mod+Return exec alacritty
 bindsym $mod+b exec google-chrome-stable
 bindsym $mod+Shift+s exec flameshot gui

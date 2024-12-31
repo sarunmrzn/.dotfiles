@@ -1,11 +1,11 @@
 #!/bin/sh
 
 BLANK='#00000000'           # Fully transparent
-CLEAR='#282828cc'           # Semi-transparent Gruvbox dark background
-DEFAULT='#d3869b'           # Gruvbox purple
-TEXT='#ebdbb2'              # Gruvbox light tan (text)
-WRONG='#fb4934'             # Gruvbox red (wrong input)
-VERIFYING='#b8bb26'         # Gruvbox green (verifying)
+CLEAR='#121212cc'           # Semi-transparent dark gray background
+DEFAULT='#b0b0b0'           # Light gray for default color
+TEXT='#b0b0b0'              # Light gray for text
+WRONG='#616161'             # Dark gray for wrong input
+VERIFYING='#888888'         # Medium gray for verifying
 
 i3lock \
 --insidever-color=$CLEAR     \
