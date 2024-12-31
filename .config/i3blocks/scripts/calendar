@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 WIDTH=${WIDTH:-200}
-HEIGHT=${HEIGHT:-200}
+HEIGHT=${HEIGHT:-250}
 DATEFMT=${DATEFMT:-"+%a %d.%m.%Y %H:%M:%S"}
 SHORTFMT=${SHORTFMT:-"+%H:%M:%S"}
 
