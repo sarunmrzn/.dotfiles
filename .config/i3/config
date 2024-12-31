@@ -26,7 +26,7 @@ exec_always setxkbmap -option caps:escape
 exec_always xcape -e 'Caps_Lock=Escape'
 exec_always xset r rate 250 50
 exec_always picom -f
-exec_always feh --bg-fill ~/Pictures/wallhaven-m3e3e1.png
+exec_always feh --bg-fill ~/Pictures/wallhaven-qzv3kl.jpg
 
 # Floating Modifier
 floating_modifier $mod
