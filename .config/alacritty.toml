@@ -1,29 +1,29 @@
 [colors.primary]
-background = '#121212'  # Very dark gray background
-foreground = '#b0b0b0'  # Light gray for foreground
+background = '#000000'  # Deep navy blue background
+foreground = '#c0caf5'  # Soft blue for foreground
 
 [colors.normal]
-black   = '#212121'  # Dark gray for black
-red     = '#616161'  # Medium dark gray for red
-green   = '#808080'  # Medium gray for green
-yellow  = '#a0a0a0'  # Light gray for yellow
-blue    = '#b0b0b0'  # Light gray for blue
-magenta = '#b0b0b0'  # Light gray for magenta
-cyan    = '#b0b0b0'  # Light gray for cyan
-white   = '#b0b0b0'  # Light gray for white
+black   = '#1a1b26'  # Deep navy blue for black
+red     = '#f7768e'  # Vibrant red-pink for red
+green   = '#9ece6a'  # Muted green for green
+yellow  = '#e0af68'  # Warm yellow for yellow
+blue    = '#7aa2f7'  # Calm blue for blue
+magenta = '#bb9af7'  # Soft purple for magenta
+cyan    = '#7dcfff'  # Light cyan for cyan
+white   = '#a9b1d6'  # Light muted blue for white
 
 [colors.bright]
-black   = '#565f89'  # Darker gray for bright black
-red     = '#616161'  # Medium dark gray for bright red
-green   = '#808080'  # Medium gray for bright green
-yellow  = '#a0a0a0'  # Light gray for bright yellow
-blue    = '#b0b0b0'  # Light gray for bright blue
-magenta = '#b0b0b0'  # Light gray for bright magenta
-cyan    = '#b0b0b0'  # Light gray for bright cyan
-white   = '#d0d0d0'  # Very light gray for bright white
+black   = '#414868'  # Muted blue-gray for bright black
+red     = '#f7768e'  # Vibrant red-pink for bright red
+green   = '#9ece6a'  # Muted green for bright green
+yellow  = '#e0af68'  # Warm yellow for bright yellow
+blue    = '#7aa2f7'  # Calm blue for bright blue
+magenta = '#bb9af7'  # Soft purple for bright magenta
+cyan    = '#7dcfff'  # Light cyan for bright cyan
+white   = '#c0caf5'  # Soft blue for bright white
 
 [font]
-size = 14
+size = 12
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -50,4 +50,3 @@ unfocused_hollow = true
 
 [mouse]
 hide_when_typing = true
-
