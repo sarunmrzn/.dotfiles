@@ -1,5 +1,5 @@
 [colors.primary]
-background = '#000000'  # Deep navy blue background
+background = '#1a1b26'  # Deep navy blue background
 foreground = '#c0caf5'  # Soft blue for foreground
 
 [colors.normal]
@@ -50,3 +50,4 @@ unfocused_hollow = true
 
 [mouse]
 hide_when_typing = true
+
