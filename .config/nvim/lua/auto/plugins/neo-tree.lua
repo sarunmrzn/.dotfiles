@@ -26,6 +26,14 @@ return {
         filtered_items = {
           hide_dotfiles = true,
         },
+        always_show = {
+          ".config",
+          ".screenlayouts",
+          ".bashrc",
+          ".zshrc",
+          ".tmux.conf",
+        },
+
         follow_current_file = {
           enabled = true,
         },
