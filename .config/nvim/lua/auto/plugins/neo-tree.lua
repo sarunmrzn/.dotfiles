@@ -24,16 +24,8 @@ return {
           },
         },
         filtered_items = {
-          hide_dotfiles = true,
+          hide_dotfiles = false,
         },
-        always_show = {
-          ".config",
-          ".screenlayouts",
-          ".bashrc",
-          ".zshrc",
-          ".tmux.conf",
-        },
-
         follow_current_file = {
           enabled = true,
         },
