@@ -25,18 +25,17 @@ set $ws10 "10"
 # Autostart Applications
 # ============================================
 
-exec --no-startup-id \
-    dex --autostart --environment i3 && \
-    redshift && \
-    blueman-applet && \
-    nm-applet && \
-    optimus-manager-qt && \
-    picom && \
-    feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id redshift
+exec --no-startup-id blueman-applet
+exec --no-startup-id nm-applet
+exec --no-startup-id optimus-manager-qt
+exec --no-startup-id picom
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always setxkbmap -option caps:escape
 exec_always xcape -e 'Caps_Lock=Escape'
 exec_always xset r rate 250 50
+exec_always feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
 
 # ============================================
 # Floating Modifier
