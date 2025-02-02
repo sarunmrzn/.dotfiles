@@ -25,16 +25,17 @@ set $ws10 "10"
 # Autostart Applications
 # ============================================
 
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id redshift
-exec --no-startup-id blueman-applet
-exec --no-startup-id nm-applet
-exec --no-startup-id optimus-manager-qt
-exec --no-startup-id picom
+exec --no-startup-id \
+    dex --autostart --environment i3 && \
+    redshift && \
+    blueman-applet && \
+    nm-applet && \
+    optimus-manager-qt && \
+    picom && \
+    feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
 exec_always setxkbmap -option caps:escape
 exec_always xcape -e 'Caps_Lock=Escape'
 exec_always xset r rate 250 50
-exec_always feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
 
 # ============================================
 # Floating Modifier
@@ -47,16 +48,9 @@ floating_modifier $mod
 # ============================================
 
 for_window [class="Alacritty"] move to workspace $ws1
-for_window [class="firefox"] move to workspace $ws2
-for_window [class="chrome"] move to workspace $ws2
-for_window [instance="thunar"] move to workspace $ws2
-for_window [instance="postman"] move to workspace $ws3
-for_window [class="DBeaver"] move to workspace $ws3
-for_window [class="MongoDB Compass"] move to workspace $ws3
-for_window [instance="insomnia"] move to workspace $ws3
-for_window [class="discord"] move to workspace $ws4
-for_window [instance="slack"] move to workspace $ws4
-for_window [instance="teams"] move to workspace $ws4
+for_window [class="firefox|chrome|thunar"] move to workspace $ws2
+for_window [instance="postman|insomnia|DBeaver|MongoDB Compass"] move to workspace $ws3
+for_window [instance="discord|slack|teams"] move to workspace $ws4
 for_window [class="obsidian"] move to workspace $ws5
 for_window [class="Steam"] move to workspace $ws6
 for_window [class="Stremio"] move to workspace $ws7
@@ -88,7 +82,6 @@ bar {
     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
     position bottom
     workspace_buttons yes
-    # i3bar_command i3bar --transparency
 
     colors {
         background $background
@@ -138,10 +131,17 @@ bindsym $mod+x exec ~/.config/scripts/lock.sh
 # Volume Control
 # ============================================
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Volume Controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Brightness Controls
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86KbdBrightnessUp exec light -A 5 /sysfs/leds/phy0-led/brightness
+bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
 
 # ============================================
 # Media Player Controls
@@ -151,15 +151,6 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-# ============================================
-# Brightness Control
-# ============================================
-
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
-bindsym XF86KbdBrightnessUp exec light -A 5 /sysfs/leds/phy0-led/brightness
-bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
 
 # ============================================
 # Directional Focus and Move
