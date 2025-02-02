@@ -28,9 +28,7 @@
 
 !.config/dunst
 
-!.config/i3status
-
-!.config/i3blocks
+!.config/polybar
 
 !.config/fish
 
