@@ -23,7 +23,7 @@ cyan    = '#7dcfff'  # Light cyan for bright cyan
 white   = '#c0caf5'  # Soft blue for bright white
 
 [font]
-size = 12
+size = 10
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
