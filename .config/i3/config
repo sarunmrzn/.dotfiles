@@ -30,7 +30,7 @@ exec --no-startup-id redshift
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id optimus-manager-qt
-exec --no-startup-id "sleep 1 && picom -f --experimental-backends"
+exec --no-startup-id picom
 exec_always setxkbmap -option caps:escape
 exec_always xcape -e 'Caps_Lock=Escape'
 exec_always xset r rate 250 50
