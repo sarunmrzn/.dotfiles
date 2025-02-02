@@ -33,6 +33,7 @@ exec --no-startup-id \
     optimus-manager-qt && \
     picom && \
     feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always setxkbmap -option caps:escape
 exec_always xcape -e 'Caps_Lock=Escape'
 exec_always xset r rate 250 50
@@ -72,26 +73,6 @@ set $indicator  #414868
 set $text       #c0caf5
 set $itext      #a9b1d6
 set $urgent     #f7768e
-
-# ============================================
-# i3bar Configuration
-# ============================================
-
-bar {
-    bindsym button1 nop
-    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-    position bottom
-    workspace_buttons yes
-
-    colors {
-        background $background
-        separator  $indicator
-
-        focused_workspace  $background $background $text
-        inactive_workspace $indicator $indicator $itext
-        urgent_workspace   $urgent $urgent $text 
-    }
-}
 
 # ============================================
 # Client (Window) Colors
