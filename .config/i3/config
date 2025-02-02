@@ -30,10 +30,10 @@ exec --no-startup-id redshift
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id optimus-manager-qt
+exec --no-startup-id "sleep 1 && picom -f --experimental-backends"
 exec_always setxkbmap -option caps:escape
 exec_always xcape -e 'Caps_Lock=Escape'
 exec_always xset r rate 250 50
-exec_always picom -f
 exec_always feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
 
 # ============================================
@@ -165,17 +165,17 @@ bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
 # Directional Focus and Move
 # ============================================
 
-# Directional Focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+# Focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-# Directional Move
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# Move
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # ============================================
 # Layout and Window Mode Controls
@@ -228,10 +228,10 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # ============================================
 
 mode "resize" {
-    bindsym j resize shrink width 10 px or 10 ppt
-    bindsym k resize grow height 10 px or 10 ppt
-    bindsym l resize shrink height 10 px or 10 ppt
-    bindsym semicolon resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
@@ -242,3 +242,5 @@ bindsym $mod+r mode "resize"
 # ============================================
 gaps inner 5
 # gaps outer 10
+smart_gaps on
+hide_edge_borders smart
