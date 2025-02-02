@@ -106,7 +106,7 @@ bar {
 
 client.focused            $indicator $background $text $indicator
 client.unfocused          $background $background $itext $background
-client.focused_inactive   $urgent    $background $text $indicator
+client.focused_inactive   $indicator $background $itext $indicator
 client.urgent             $indicator $background $text $background
 
 # ============================================
@@ -156,8 +156,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # Brightness Control
 # ============================================
 
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 bindsym XF86KbdBrightnessUp exec light -A 5 /sysfs/leds/phy0-led/brightness
 bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
 
