@@ -1,15 +1,66 @@
-# ============================================
-# General Settings
-# ============================================
-
-# Font and Modifier Key
-font pango:Fira Mono 10
+font pango:monospace 10
+# font pango:DejaVu Sans Mono 8
 set $mod Mod4
 
-# i3status refresh command
+exec --no-startup-id dex --autostart --environment i3
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+exec_always setxkbmap -option caps:escape
+exec_always xcape -e 'Caps_Lock=Escape'
+exec_always xset r rate 250 50
+exec_always feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
+
 set $refresh_i3status killall -SIGUSR1 i3status
 
-# Workspace Definitions
+floating_modifier $mod
+
+tiling_drag modifier titlebar
+
+bindsym $mod+Return exec alacritty
+bindsym $mod+b exec google-chrome-stable
+bindsym $mod+Shift+s exec flameshot gui
+bindsym Print exec flameshot full -p ~/Screenshots
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec --no-startup-id dmenu_run
+
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -21,152 +72,11 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# ============================================
-# Autostart Applications
-# ============================================
-
-exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id redshift
-exec --no-startup-id blueman-applet
-exec --no-startup-id nm-applet
-exec --no-startup-id optimus-manager-qt
-exec --no-startup-id picom
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always setxkbmap -option caps:escape
-exec_always xcape -e 'Caps_Lock=Escape'
-exec_always xset r rate 250 50
-exec_always feh --bg-fill ~/Pictures/wallhaven-qz13pl.jpg
-
-# ============================================
-# Floating Modifier
-# ============================================
-
-floating_modifier $mod
-
-# ============================================
-# Application Rules (Workspace Assignment)
-# ============================================
-
 for_window [class="Alacritty"] move to workspace $ws1
-for_window [class="firefox|chrome|thunar"] move to workspace $ws2
-for_window [instance="postman|insomnia|DBeaver|MongoDB Compass"] move to workspace $ws3
-for_window [instance="discord|slack|teams"] move to workspace $ws4
-for_window [class="obsidian"] move to workspace $ws5
-for_window [class="Steam"] move to workspace $ws6
-for_window [class="Stremio"] move to workspace $ws7
+for_window [class="chrome|thunar|obsidian"] move to workspace $ws2
+for_window [instance="postman|DBeaver"] move to workspace $ws3
+for_window [instance="discord|slack"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws10
-
-# ============================================
-# Window Border Settings
-# ============================================
-
-default_border none
-default_floating_border none
-
-# ============================================
-# Color Variables (Tokyo Night Theme)
-# ============================================
-
-set $background #1a1b26
-set $indicator  #414868
-set $text       #c0caf5
-set $itext      #a9b1d6
-set $urgent     #f7768e
-
-# ============================================
-# Client (Window) Colors
-# ============================================
-
-client.focused            $indicator $background $text $indicator
-client.unfocused          $background $background $itext $background
-client.focused_inactive   $indicator $background $itext $indicator
-client.urgent             $indicator $background $text $background
-
-# ============================================
-# System Commands (Reload, Restart, Exit)
-# ============================================
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# ============================================
-# Application Launch Shortcuts
-# ============================================
-
-bindsym $mod+d exec "dmenu_run -nf '#a9b1d6' -nb '#1a1b26' -sb '#414868' -sf '#c0caf5' -fn 'Fira Mono:size=10' -p 'run: '"
-bindsym $mod+Return exec alacritty
-bindsym $mod+b exec google-chrome-stable
-bindsym $mod+Shift+s exec flameshot gui
-bindsym Print exec flameshot full -p ~/Screenshots
-
-# ============================================
-# Window Management Shortcuts
-# ============================================
-
-bindsym $mod+Shift+q kill
-bindsym $mod+x exec ~/.config/scripts/lock.sh
-
-# ============================================
-# Volume Control
-# ============================================
-
-# Volume Controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Brightness Controls
-bindsym XF86MonBrightnessUp exec light -A 10
-bindsym XF86MonBrightnessDown exec light -U 10
-bindsym XF86KbdBrightnessUp exec light -A 5 /sysfs/leds/phy0-led/brightness
-bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
-
-# ============================================
-# Media Player Controls
-# ============================================
-
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
-# ============================================
-# Directional Focus and Move
-# ============================================
-
-# Focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# Move
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# ============================================
-# Layout and Window Mode Controls
-# ============================================
-
-# Fullscreen Toggle
-bindsym $mod+f fullscreen toggle
-
-# Layout Controls
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# Floating Toggle
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
-
-# ============================================
-# Workspace Switching
-# ============================================
 
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -179,10 +89,6 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# ============================================
-# Workspace Container Movement
-# ============================================
-
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -194,24 +100,46 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# ============================================
-# Resize Mode
-# ============================================
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
-# ============================================
-# Gaps Configuration (Requires i3-gaps)
-# ============================================
-gaps inner 5
-# gaps outer 10
-smart_gaps on
-hide_edge_borders smart
+bar {
+        status_command i3status
+}
+
+default_border none
+default_floating_border none
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86KbdBrightnessUp exec light -A 5 /sysfs/leds/phy0-led/brightness
+bindsym XF86KbdBrightnessDown exec light -U 5 /sys/leds/phy0-led/brightness
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
