@@ -10,6 +10,7 @@
 !.vimrc
 !.zshrc
 !.tmux.conf
+!setup.sh
 
 # Allow the .config folder itself.
 !/.config/
