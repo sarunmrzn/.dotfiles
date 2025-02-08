@@ -1,0 +1,35 @@
+# Ignore all files and directories at the root…
+/*
+# …but don’t ignore the .gitignore itself.
+!.gitignore
+
+# Unignore all directories so Git can “see” inside them.
+!*/
+
+!.bashrc
+!.vimrc
+!.zshrc
+!.tmux.conf
+!setup.sh
+
+# Allow the .config folder itself.
+!/.config/
+
+# By default, ignore everything inside .config.
+# (This prevents Git from auto-adding every config file.)
+/.config/*
+
+# Now, explicitly un-ignore only the subdirectories you want.
+# Replace “nvim” and “alacritty” with the actual folder names you wish to track.
+!/.config/nvim/
+!/.config/alacritty/
+!/.config/gtk-3.0/
+!/.config/gtk-4.0/
+!/.config/hypr/
+!/.config/sway/
+!/.config/swaync/
+!/.config/waybar/
+!/.config/rofi/
+!/.config/tmuxinator/
+!/.config/kitty/
+!/.config/mimeapps.list
