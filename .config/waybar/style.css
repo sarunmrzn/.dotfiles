@@ -1,0 +1,394 @@
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 10px;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+@import "theme.css";
+
+/* === Main Background === */
+
+window#waybar {
+  background: @main-bg; /* Dark Background */
+}
+
+/* === Drop Shadow === */
+
+window#waybar > box {
+  background-color: transparent;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
+  margin: 2px;
+}
+
+/* === Tooltip === */
+
+tooltip {
+  background: @main-bg; /* Dark Background */
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 8px;
+  border-color: @main-br; /* Soft Lavender */
+}
+tooltip label {
+  color: @main-fg; /* Soft Lavender */
+  font-weight: normal;
+  margin: -1.5px 3px;
+}
+
+/* === Workspace Buttons === */
+
+#workspaces button {
+  color: @module-fg; /* Rose Pine Yellow */
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 2px 0;
+  padding: 0 2px;
+  transition: none;
+}
+#workspaces button:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  background: @hover-bg; /* Deep Blue Gray */
+  text-shadow: none;
+  box-shadow: none;
+}
+#workspaces button.active {
+  color: @active-fg; /* Dark Background */
+  background: @active-bg; /* Soft Pink */
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
+  margin: 2px;
+  padding: 0 6px;
+}
+
+/* === General === */
+
+#custom-ws,
+#workspaces,
+#window,
+#custom-cpuinfo,
+#memory,
+/* #cpu, */
+#custom-cpu,
+#idle_inhibitor,
+#clock,
+#custom-wifi,
+#bluetooth,
+#custom-update,
+#custom-media,
+#pulseaudio,
+/* #backlight, */
+#custom-backlight,
+#battery,
+#custom-power {
+  opacity: 1;
+  color: @module-fg; /* Rose Pine Yellow */
+  padding: 0 4px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+#custom-left1,
+#custom-left2,
+#custom-left3,
+#custom-left4,
+#custom-left5,
+#custom-left6,
+#custom-left7,
+#custom-left8 {
+  font-size: 14.68px;
+  margin-bottom: 0;
+  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+#custom-right1,
+#custom-right2,
+#custom-right3,
+#custom-right4,
+#custom-right5 {
+  font-size: 14.68px;
+  margin-bottom: 0;
+  padding-right: 3px;
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* === Modules === */
+
+/* == Window Icon == */
+
+#custom-ws {
+  background: @main-bg; /* Dark Background */
+}
+
+/* == Workspaces == */
+
+#custom-left1 {
+  color: @workspaces; /* Rose Pine Base */
+  background: @main-bg; /* Dark Background */
+  font-size: 14.68px;
+  margin-bottom: 0;
+  padding-left: 2px;
+}
+#workspaces {
+  background: @workspaces; /* Rose Pine Base */
+}
+#custom-right1 {
+  color: @workspaces; /* Rose Pine Base */
+  background: @main-bg; /* Dark Background */
+  font-size: 14.68px;
+  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
+}
+
+/* == Temperature == */
+
+#custom-paddc {
+  padding-right: 22px;
+}
+#custom-left2 {
+  color: @cpuinfo; /* Rose Pine Base */
+  background: @main-bg; /* Dark Background */
+  padding-left: 3px;
+}
+#custom-cpuinfo {
+  background: @cpuinfo; /* Rose Pine Base */
+  padding-left: 1px;
+  padding-right: 0;
+}
+
+/* == Memory == */
+
+#custom-left3 {
+  color: @memory; /* Deep Blue Gray */
+  background: @cpuinfo; /* Rose Pine Base */
+  padding-left: 3px;
+}
+#memory {
+  background: @memory; /* Deep Blue Gray */
+  padding-left: 1px;
+  padding-right: 0;
+}
+#memory.warning {
+  color: @warning; /* Rose Pine Yellow */
+}
+#memory.critical {
+  color: @critical; /* Rose Pine Red */
+}
+
+/* == CPU == */
+
+#custom-left4 {
+  color: @cpu; /* Muted Teal */
+  background: @memory; /* Deep Blue Gray */
+  padding-left: 3px;
+}
+/*
+#cpu {
+  background: @cpu;
+}
+*/
+#custom-cpu {
+  background: @cpu; /* Muted Teal */
+}
+#custom-leftin1 {
+  color: @cpu; /* Muted Teal */
+  font-size: 15.5px;
+  margin-bottom: -1px;
+}
+
+/* == Distro Icon == */
+
+#custom-left5 {
+  color: @distro-bg; /* Soft Pink */
+  background: @main-bg; /* Dark Background */
+  font-size: 15.68px;
+  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);
+  margin-bottom: -2px;
+  padding-left: 3px;
+}
+#custom-distro {
+  color: @distro-fg; /* Black */
+  background: @distro-bg; /* Soft Pink */
+  font-size: 14.6px;
+  margin: 0 -1px -2px 0;
+  padding: 0 0 0 3px;
+  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+}
+#custom-right2 {
+  color: @distro-bg; /* Soft Pink */
+  background: @main-bg; /* Dark Background */
+  font-size: 15.68px;
+  margin-bottom: -2px;
+}
+
+/* == Time == */
+
+#custom-rightin1 {
+  color: @time; /* Muted Teal */
+  font-size: 15.5px;
+  margin-bottom: -1px;
+}
+#idle_inhibitor {
+  background: @time; /* Muted Teal */
+  margin-right: -2px;
+  padding: 0 0 0 7px;
+}
+#idle_inhibitor:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+#clock.time {
+  background: @time; /* Muted Teal */
+  padding: 0 3px 0 0;
+}
+#custom-right3 {
+  color: @time; /* Muted Teal */
+  background: @date; /* Deep Blue Gray */
+}
+
+/* == Date == */
+
+#clock.date {
+  background: @date; /* Deep Blue Gray */
+}
+#clock.date:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+#custom-right4 {
+  color: @date; /* Deep Blue Gray */
+  background: @tray; /* Rose Pine Base */
+}
+
+/* == Tray == */
+
+#custom-wifi {
+  padding-left: 5px;
+  padding-right: 8px;
+  background: @tray; /* Rose Pine Base */
+}
+#custom-wifi:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#bluetooth {
+  padding-right: 5px;
+  background: @tray; /* Rose Pine Base */
+}
+#bluetooth:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#custom-update {
+  padding-right: 8px;
+  background: @tray; /* Rose Pine Base */
+}
+#custom-update:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+#custom-right5 {
+  color: @tray; /* Rose Pine Base */
+  background: @main-bg; /* Dark Background */
+}
+
+/* == Media Info == */
+
+#custom-media {
+  font-weight: normal;
+  background-color: @main-bg; /* Dark Background */
+  padding-right: 8px;
+  padding-left: 8px;
+}
+#custom-media:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* == Output Device == */
+
+#custom-left6 {
+  color: @pulseaudio; /* Rose Pine Base */
+  background: @main-bg; /* Dark Background */
+  padding-left: 3px;
+}
+#pulseaudio {
+  background: @pulseaudio; /* Rose Pine Base */
+}
+#pulseaudio:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* == Brightness == */
+
+#custom-left7 {
+  color: @backlight; /* Deep Blue Gray */
+  background: @pulseaudio; /* Rose Pine Base */
+  padding-left: 2px;
+}
+/*
+#backlight {
+  background: @backlight;
+}
+*/
+#custom-backlight {
+  background: @backlight; /* Deep Blue Gray */
+}
+
+/* == Battery == */
+
+#custom-left8 {
+  color: @battery; /* Muted Teal */
+  background: @backlight; /* Deep Blue Gray */
+  padding-left: 2px;
+}
+#battery {
+  color: @module-fg; /* Rose Pine Yellow */
+  background: @battery; /* Muted Teal */
+}
+#battery.warning {
+  color: @warning; /* Rose Pine Yellow */
+}
+#battery.critical {
+  color: @critical; /* Rose Pine Red */
+}
+#battery.charging {
+  color: @charging; /* Soft Lavender */
+}
+
+/* == Power Button == */
+
+#custom-leftin2 {
+  color: @battery; /* Muted Teal */
+  background: @main-bg; /* Dark Background */
+  font-size: 15.5px;
+  margin-bottom: -1px;
+}
+#custom-power {
+  color: @main-bg; /* Dark Background */
+  background: @power; /* Soft Pink */
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 2px 4px 2px 0;
+  padding: 0 6px 0 9px;
+}
+#custom-power:hover {
+  color: @hover-fg; /* Light Lavender with Transparency */
+  background: @hover-bg; /* Deep Blue Gray */
+  text-shadow: none;
+  box-shadow: none;
+}
+

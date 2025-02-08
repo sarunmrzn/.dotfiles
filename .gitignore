@@ -23,10 +23,28 @@
 !/.config/nvim/
 !/.config/alacritty/
 !/.config/bpytop/
+!/.config/gtk-3.0/
+!/.config/hypr/
+!/.config/lazygit/
+!/.config/nwg-look/
+!/.config/nwg-look/
+!/.config/swaync/
+!/.config/waybar/
+!/.config/wofi/
+
+!/.config/mimeapps.list
+!/.config/pavucontrol.ini
 
 # To ensure that all files and nested folders inside these are included,
 # un-ignore their entire contents recursively:
 !/.config/nvim/**
 !/.config/alacritty/**
 !/.config/bpytop/**
-
+!/.config/gtk-3.0/**
+!/.config/hypr/**
+!/.config/lazygit/**
+!/.config/nwg-look/**
+!/.config/nwg-look/**
+!/.config/swaync/**
+!/.config/waybar/**
+!/.config/wofi/**
