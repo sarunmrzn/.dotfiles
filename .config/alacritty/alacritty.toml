@@ -3,7 +3,7 @@
   dynamic_padding = true
   decorations = "None"
   startup_mode = "Maximized"
-  opacity = 0.80
+  opacity = 1
   blur = true
 
 [font]
