@@ -1,13 +1,31 @@
 [window]
-  # Reduced opacity for a slightly more translucent effect
-  opacity = 0.85
+  padding = {x = 0, y = 0}
+  dynamic_padding = true
+  decorations = "None"
+  startup_mode = "Maximized"
+  opacity = 0.80
+  blur = true
 
 [font]
   normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-  # Added bold variant for emphasis
   bold   = { family = "JetBrainsMono Nerd Font", style = "Bold" }
-  # (Optional) italic variant:
   italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+  size = 10
+
+[scrolling]
+  history = 10000
+  multiplier = 3
+
+[cursor]
+  style = {shape = "Block", blinking = "Off"}
+  unfocused_hollow = true
+
+[mouse]
+  hide_when_typing = true
+
+[selection]
+  save_to_clipboard = true
+  semantic_escape_chars = ",│`|:\"' ()[]{}<>\\t"
 
 [colors.primary]
 foreground = "#e0def4"
@@ -16,7 +34,6 @@ dim_foreground = "#908caa"
 bright_foreground = "#e0def4"
 
 [colors.cursor]
-# Updated the cursor color to Rosé Pine Love for better visibility
 text = "#e0def4"
 cursor = "#eb6f92"
 
@@ -73,14 +90,11 @@ cyan    = "#ebbcba"
 white   = "#e0def4"
 
 [colors.dim]
-# A darker set for de-emphasized text
 black   = "#1a1723"
-red     = "#d65a7a"   # slightly darker red than bright
-green   = "#27627f"   # darkened green
-yellow  = "#d9aa67"   # darkened yellow
-blue    = "#8ab9c9"   # darkened blue
-magenta = "#af97d7"   # darkened magenta
-cyan    = "#d4a4ac"   # darkened cyan
-white   = "#c0bfd4"   # dimmed white
-
-
+red     = "#d65a7a"
+green   = "#27627f"
+yellow  = "#d9aa67"
+blue    = "#8ab9c9"
+magenta = "#af97d7"
+cyan    = "#d4a4ac"
+white   = "#c0bfd4"
