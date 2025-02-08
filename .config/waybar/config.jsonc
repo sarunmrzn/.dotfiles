@@ -27,7 +27,6 @@
     "memory",               // memory
 
     "custom/left4",
-    // "cpu",                  // cpu
     "custom/cpu",           // cpu
     "custom/leftin1",
 
