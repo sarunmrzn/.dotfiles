@@ -3,7 +3,9 @@ set -euo pipefail
 
 # TODO: sddm configuration
 # clone notes repo, mechabar waybar, 
-#
+
+#`$ nmcli device wifi connect <SSID> --ask`
+
 # pixelated issue
 # ➜  ~ cd /usr/share/applications
 # ➜  applications cat discord.desktop
