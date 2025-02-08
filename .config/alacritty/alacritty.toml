@@ -1,0 +1,86 @@
+[window]
+  # Reduced opacity for a slightly more translucent effect
+  opacity = 0.85
+
+[font]
+  normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+  # Added bold variant for emphasis
+  bold   = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+  # (Optional) italic variant:
+  italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+
+[colors.primary]
+foreground = "#e0def4"
+background = "#191724"
+dim_foreground = "#908caa"
+bright_foreground = "#e0def4"
+
+[colors.cursor]
+# Updated the cursor color to Rosé Pine Love for better visibility
+text = "#e0def4"
+cursor = "#eb6f92"
+
+[colors.vi_mode_cursor]
+text = "#e0def4"
+cursor = "#eb6f92"
+
+[colors.search.matches]
+foreground = "#908caa"
+background = "#26233a"
+
+[colors.search.focused_match]
+foreground = "#191724"
+background = "#ebbcba"
+
+[colors.hints.start]
+foreground = "#908caa"
+background = "#1f1d2e"
+
+[colors.hints.end]
+foreground = "#6e6a86"
+background = "#1f1d2e"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#e0def4"
+background = "#1f1d2e"
+
+[colors.selection]
+text = "#e0def4"
+background = "#403d52"
+
+[colors.normal]
+black   = "#26233a"
+red     = "#eb6f92"
+green   = "#31748f"
+yellow  = "#f6c177"
+blue    = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan    = "#ebbcba"
+white   = "#e0def4"
+
+[colors.bright]
+black   = "#6e6a86"
+red     = "#eb6f92"
+green   = "#31748f"
+yellow  = "#f6c177"
+blue    = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan    = "#ebbcba"
+white   = "#e0def4"
+
+[colors.dim]
+# A darker set for de-emphasized text
+black   = "#1a1723"
+red     = "#d65a7a"   # slightly darker red than bright
+green   = "#27627f"   # darkened green
+yellow  = "#d9aa67"   # darkened yellow
+blue    = "#8ab9c9"   # darkened blue
+magenta = "#af97d7"   # darkened magenta
+cyan    = "#d4a4ac"   # darkened cyan
+white   = "#c0bfd4"   # dimmed white
+
+
