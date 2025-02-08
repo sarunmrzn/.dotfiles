@@ -44,7 +44,6 @@
 
     "custom/wifi",          // wi-fi
     "bluetooth",            // bluetooth
-    "custom/update",        // system update
     "custom/right5"
   ],
 
@@ -265,11 +264,16 @@
   },
 
   "clock#time": {
-    "format": "{:%H:%M}",
+    "format": "{:%I:%M}",
     "tooltip": true,
-    "tooltip-format": "Standard Time: {:%I:%M %p}",
     "min-length": 6,
-    "max-length": 6
+    "max-length": 6,
+    "tooltip-format": "{tz_list}",
+    "timezones": [
+        "Asia/Kathmandu",
+        "Etc/UTC",
+        "America/New_York",
+    ]
   },
 
   "clock#date": {
@@ -330,7 +334,7 @@
       "{device_alias}: {device_battery_percentage}%",
 
     "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
+    "on-click-right": "alacritty --title '󰂯  Bluetooth TUI' bash -c bluetui",
     "interval": 1,
     "min-length": 1,
     "max-length": 1

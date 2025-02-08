@@ -31,6 +31,7 @@
 !/.config/swaync/
 !/.config/waybar/
 !/.config/wofi/
+!/.config/rofi/
 
 !/.config/mimeapps.list
 !/.config/pavucontrol.ini
@@ -48,3 +49,4 @@
 !/.config/swaync/**
 !/.config/waybar/**
 !/.config/wofi/**
+!/.config/rofi/**
