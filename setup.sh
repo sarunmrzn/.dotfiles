@@ -1,6 +1,25 @@
 #!/bin/bash
 set -euo pipefail
 
+# TODO: sddm configuration
+# clone notes repo, mechabar waybar, 
+#
+# pixelated issue
+# ➜  ~ cd /usr/share/applications
+# ➜  applications cat discord.desktop
+# [Desktop Entry]
+# Name=Discord
+# StartupWMClass=discord
+# Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
+# GenericName=Internet Messenger
+# Exec=/usr/bin/discord --enable-features=UseOzonePlatform --ozone-platform=wayland
+# Icon=discord
+# Type=Application
+# Categories=Network;InstantMessaging;
+# Path=/usr/bin
+# ➜  applications
+#
+#
 # ==============================================================================
 # 1. Basic System Update and Essential Package Installation
 # ==============================================================================
@@ -77,6 +96,7 @@ packages=(
   ffmpegthumbnailer
   fzf
   hyprland
+  uwsm
   hyprpaper
   hyprpicker
   hypridle
@@ -92,6 +112,10 @@ packages=(
   aquamarine
   hyprgraphics
   hyprland-qtutils
+  pipewire
+  pipewire-pulse
+  python3
+  wireplumber
   waybar
   lazygit
   mariadb-lts-clients
@@ -132,7 +156,6 @@ packages=(
   tumbler
   vi
   vim
-  python3
   xdotool
 )
 
