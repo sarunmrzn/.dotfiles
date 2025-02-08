@@ -24,15 +24,10 @@ fi
 
 export ARCHFLAGS="-arch $(uname -m)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 alias mux='tmuxinator'
 
 alias dot='nvim ~/.dotfiles/'
 alias ncfg='nvim ~/.dotfiles/.config/nvim/'
-alias notes='nvim ~/Notes/Scratchpad.md'
 
 alias pb='mux start pb'
 alias cango='mux start cango'
@@ -41,3 +36,7 @@ alias hltr='mux start hltr'
 . "$HOME/.cargo/env"
 eval 
 TWILIO_AC_ZSH_SETUP_PATH=/home/sarun/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

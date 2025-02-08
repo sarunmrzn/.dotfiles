@@ -44,6 +44,7 @@
 
     "custom/wifi",          // wi-fi
     "bluetooth",            // bluetooth
+    "tray",            // bluetooth
     "custom/right5"
   ],
 
@@ -418,7 +419,10 @@
     "min-length": 6,
     "max-length": 6
   },
-
+  "tray": {
+    "icon-size": 12,
+    "spacing": 4
+  },
   "custom/power": {
     "format": " ",
     "tooltip": true,
