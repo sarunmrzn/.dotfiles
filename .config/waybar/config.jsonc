@@ -42,8 +42,8 @@
     "clock#date",           // date
     "custom/right4",
 
-    "custom/wifi",          // wi-fi
-    "bluetooth",            // bluetooth
+    //"custom/wifi",          // wi-fi
+    //"bluetooth",            // bluetooth
     "tray",            // bluetooth
     "custom/right5"
   ],

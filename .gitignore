@@ -33,6 +33,7 @@
 !/.config/waybar/
 !/.config/wofi/
 !/.config/rofi/
+!/.config/dunst/
 
 !/.config/mimeapps.list
 !/.config/pavucontrol.ini
@@ -51,3 +52,4 @@
 !/.config/waybar/**
 !/.config/wofi/**
 !/.config/rofi/**
+!/.config/dunst/**

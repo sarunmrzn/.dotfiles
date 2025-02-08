@@ -1,0 +1,35 @@
+[global]
+monitor = 0
+follow = mouse
+width = (300, 600)
+height = 300
+offset = 20x20
+origin = top-right
+notification_limit = 5
+padding = 16
+horizontal_padding = 12
+frame_width = 2
+separator_height = 2
+corner_radius = 8
+idle_threshold = 120
+font = JetBrainsMono Nerd Font 10
+
+background = "#191724"
+foreground = "#e0def4"
+frame_color = "#eb6f92"
+separator_color = frame
+
+[urgency_low]
+background = "#191724"
+foreground = "#908caa"
+frame_color = "#31748f"
+
+[urgency_normal]
+background = "#1f1d2e"
+foreground = "#e0def4"
+frame_color = "#eb6f92"
+
+[urgency_critical]
+background = "#eb6f92"
+foreground = "#191724"
+frame_color = "#eb6f92"
