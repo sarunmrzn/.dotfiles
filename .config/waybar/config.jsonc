@@ -59,10 +59,10 @@
     "custom/backlight",     // brightness
 
     "custom/left8",
-    "battery",              // battery
+    "battery"              // battery
 
-    "custom/leftin2",
-    "custom/power"          // power button
+    //"custom/leftin2",
+    //"custom/power"          // power button
   ],
 
   // === Modules ===
