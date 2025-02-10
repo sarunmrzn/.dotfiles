@@ -10,7 +10,7 @@ ENABLE_CORRECTION="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(z git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(zoxide zsh-autosuggestions zsh-syntax-highlighting cp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,14 +27,18 @@ export ARCHFLAGS="-arch $(uname -m)"
 alias mux='tmuxinator'
 
 alias dot='nvim ~/.dotfiles/'
-alias ncfg='nvim ~/.dotfiles/.config/nvim/'
 
 alias pb='mux start pb'
 alias cango='mux start cango'
 alias hltr='mux start hltr'
 
+eval "$(zoxide init zsh)"
+ZOXIDE_CMD_OVERRIDE="true"
+alias cd="z"
+
 . "$HOME/.cargo/env"
 eval 
+
 TWILIO_AC_ZSH_SETUP_PATH=/home/sarun/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH; # twilio autocomplete setup
 
 export NVM_DIR="$HOME/.config/nvm"
