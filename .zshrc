@@ -10,7 +10,7 @@ ENABLE_CORRECTION="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(zoxide zsh-autosuggestions zsh-syntax-highlighting cp)
+plugins=(cp zoxide zsh-autosuggestions zsh-syntax-highlighting zsh-navigation-tools)
 
 source $ZSH/oh-my-zsh.sh
 
