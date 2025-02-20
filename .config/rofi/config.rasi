@@ -26,3 +26,5 @@ configuration{
     kb-move-char-forward: "Control+f";
     kb-mode-complete: "Control+o";
 }
+
+@theme "~/.config/rofi/theme.rasi"
