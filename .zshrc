@@ -10,8 +10,18 @@ ENABLE_CORRECTION="true"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(cp zoxide zsh-autosuggestions zsh-syntax-highlighting zsh-navigation-tools)
-
+plugins=(
+    git
+    docker
+    docker-compose
+    fzf
+    gh
+    cp 
+    zoxide 
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    zsh-navigation-tools
+)
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
@@ -24,13 +34,6 @@ fi
 
 export ARCHFLAGS="-arch $(uname -m)"
 
-alias mux='tmuxinator'
-
-alias dot='nvim ~/.dotfiles/'
-
-alias pb='mux start pb'
-alias cango='mux start cango'
-alias hltr='mux start hltr'
 
 eval "$(zoxide init zsh)"
 ZOXIDE_CMD_OVERRIDE="true"
@@ -45,4 +48,20 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH=$PATH:/home/sarun/.spicetify
+export PATH="$HOME/.spicetify:$PATH"
+
+alias ls="exa --icons"
+alias ll="exa -l --icons"
+alias la="exa -la --icons"
+
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gl="git pull"
+
+alias mux='tmuxinator'
+alias dot='nvim ~/.dotfiles/'
+alias pb='mux start pb'
+alias cango='mux start cango'
+alias hltr='mux start hltr'
