@@ -8,12 +8,18 @@ import = [ "~/.config/alacritty/tokyo-night.toml" ]
   startup_mode = "Maximized"
   opacity = 0.8
   blur = true
+  dimensions = { columns = 120, lines = 30 }
+  dynamic_title = true
+  option_as_alt = "Both"
 
 [font]
   normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
   bold   = { family = "JetBrainsMono Nerd Font", style = "Bold" }
   italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
   size = 10
+  offset = { x = 0, y = 1 }
+  glyph_offset = { x = 0, y = 0 }
+  builtin_box_drawing = true
 
 [scrolling]
   history = 10000
