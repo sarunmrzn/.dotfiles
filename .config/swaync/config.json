@@ -27,10 +27,6 @@
           "state": "muted",
           "urgency": "Low"
       },
-    //   "*": {
-    //       "on-notify": "show",
-    //       "urgency": "Normal"
-    //   }
   },
   "widgets": [
       "title",
