@@ -26,12 +26,9 @@
 !/.config/bpytop/
 !/.config/gtk-3.0/
 !/.config/hypr/
-!/.config/lazygit/
-!/.config/nwg-look/
 !/.config/nwg-look/
 !/.config/swaync/
 !/.config/waybar/
-!/.config/wofi/
 !/.config/rofi/
 !/.config/dunst/
 
@@ -45,11 +42,8 @@
 !/.config/bpytop/**
 !/.config/gtk-3.0/**
 !/.config/hypr/**
-!/.config/lazygit/**
-!/.config/nwg-look/**
 !/.config/nwg-look/**
 !/.config/swaync/**
 !/.config/waybar/**
-!/.config/wofi/**
 !/.config/rofi/**
 !/.config/dunst/**

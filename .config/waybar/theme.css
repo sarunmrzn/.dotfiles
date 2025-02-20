@@ -6,43 +6,43 @@
 
 /* Main Colors */
 
-@define-color main-fg         #e0def4; /* Soft Lavender */
-@define-color main-bg         #191724; /* Dark Background */
-@define-color main-br         #e0def4; /* Soft Lavender */
+@define-color main-fg         #c0caf5; /* Tokyo Night Foreground */
+@define-color main-bg         #1a1b26; /* Tokyo Night Background */
+@define-color main-br         #c0caf5; /* Tokyo Night Foreground */
 
-@define-color active-bg       #ebbcba; /* Soft Pink */
-@define-color active-fg       #191724; /* Dark Background */
+@define-color active-bg       #7aa2f7; /* Tokyo Night Blue */
+@define-color active-fg       #1a1b26; /* Tokyo Night Background */
 
-@define-color hover-bg        #26233a; /* Deep Blue Gray */
-@define-color hover-fg        rgba(224, 222, 244, 0.75); /* Light Lavender with Transparency */
+@define-color hover-bg        #292e42; /* Tokyo Night Darker Blue */
+@define-color hover-fg        rgba(192, 202, 245, 0.75); /* Light Blue with Transparency */
 
 @define-color white           #ffffff; /* White */
 @define-color black           #000000; /* Black */
 
 /* Module Colors */
 
-@define-color module-fg       #f6c177; /* Rose Pine Yellow */
-@define-color workspaces      #1f1d2e; /* Rose Pine Base */
+@define-color module-fg       #e0af68; /* Tokyo Night Yellow */
+@define-color workspaces      #1f2335; /* Tokyo Night Darker Base */
 
 /* Individual Module Colors */
 
-@define-color cpuinfo         #1f1d2e; /* Rose Pine Base */
-@define-color memory          #26233a; /* Deep Blue Gray */
-@define-color cpu             #31748f; /* Muted Teal */
+@define-color cpuinfo         #1f2335; /* Tokyo Night Darker Base */
+@define-color memory          #292e42; /* Tokyo Night Darker Blue */
+@define-color cpu             #7dcfff; /* Tokyo Night Cyan */
 @define-color distro-fg       #000000; /* Black */
-@define-color distro-bg       #ebbcba; /* Soft Pink */
-@define-color time            #31748f; /* Muted Teal */
-@define-color date            #26233a; /* Deep Blue Gray */
-@define-color tray            #1f1d2e; /* Rose Pine Base */
+@define-color distro-bg       #bb9af7; /* Tokyo Night Purple */
+@define-color time            #7aa2f7; /* Tokyo Night Blue */
+@define-color date            #292e42; /* Tokyo Night Darker Blue */
+@define-color tray            #1f2335; /* Tokyo Night Darker Base */
 
-@define-color pulseaudio      #1f1d2e; /* Rose Pine Base */
-@define-color backlight       #26233a; /* Deep Blue Gray */
-@define-color battery         #31748f; /* Muted Teal */
-@define-color power           #ebbcba; /* Soft Pink */
+@define-color pulseaudio      #1f2335; /* Tokyo Night Darker Base */
+@define-color backlight       #292e42; /* Tokyo Night Darker Blue */
+@define-color battery         #7dcfff; /* Tokyo Night Cyan */
+@define-color power           #f7768e; /* Tokyo Night Red */
 
 /* State Colors */
 
-@define-color warning         #f6c177; /* Rose Pine Yellow */
-@define-color critical        #eb6f92; /* Rose Pine Red */
-@define-color charging        #e0def4; /* Soft Lavender */
+@define-color warning         #e0af68; /* Tokyo Night Yellow */
+@define-color critical        #f7768e; /* Tokyo Night Red */
+@define-color charging        #c0caf5; /* Tokyo Night Foreground */
 
