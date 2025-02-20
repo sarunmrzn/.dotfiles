@@ -1,0 +1,8 @@
+# /home/sarun/.config/tmuxinator/cango.yml
+
+name: cango
+root: ~/Code/cango/cango-api/
+
+windows:
+  - editor: nvim
+  - server: npm run start:dev

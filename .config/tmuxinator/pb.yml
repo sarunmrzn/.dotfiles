@@ -1,0 +1,9 @@
+# /home/sarun/.config/tmuxinator/pb.yml
+
+name: pb
+root: ~/Code/proshore/Ruby/
+
+
+windows:
+  - editor: nvim .
+  - server: docker exec -it ruby-app /bin/bash
