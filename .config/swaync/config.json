@@ -27,6 +27,10 @@
           "state": "muted",
           "urgency": "Low"
       },
+    //   "*": {
+    //       "on-notify": "show",
+    //       "urgency": "Normal"
+    //   }
   },
   "widgets": [
       "title",
@@ -54,12 +58,14 @@
           "show-percentage": true,
           "max-volume": 100,
           "min-volume": 0,
+          "use-pamixer": true
       },
       "backlight": {
           "label": "󰃟",
           "show-percentage": true,
           "min-brightness": 0,
           "max-brightness": 100,
+          "use-brightnessctl": true
       }
   }
 }
