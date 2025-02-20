@@ -27,7 +27,8 @@
     "memory",               // memory
 
     "custom/left4",
-    "custom/cpu",           // cpu
+    // "custom/cpu",           // cpu
+    "cpu",                  // cpu
     "custom/leftin1",
 
     "custom/left5",
@@ -42,9 +43,9 @@
     "clock#date",           // date
     "custom/right4",
 
-    //"custom/wifi",          // wi-fi
-    //"bluetooth",            // bluetooth
-    "tray",            // bluetooth
+    "custom/wifi",          // wi-fi
+    "bluetooth",            // bluetooth
+    "custom/update",        // system update
     "custom/right5"
   ],
 
@@ -55,14 +56,14 @@
     "pulseaudio",           // output device
 
     "custom/left7",
-    // "backlight",            // brightness
-    "custom/backlight",     // brightness
+    // "custom/backlight",     // brightness
+    "backlight",            // brightness
 
     "custom/left8",
-    "battery"              // battery
+    "battery",              // battery
 
-    //"custom/leftin2",
-    //"custom/power"          // power button
+    "custom/leftin2",
+    "custom/power"          // power button
   ],
 
   // === Modules ===
@@ -227,19 +228,19 @@
     "min-length": 7,
     "max-length": 7
   },
-  /*  
-  "cpu": {
-    "format": "󰻠 {usage}%",
-    "tooltip": false,
+  /*
+  "custom/cpu": {
+    "exec": "~/.config/waybar/scripts/cpu-usage.sh",
+    "return-type": "json",
+    "tooltip": true,
     "interval": 5,
     "min-length": 6,
     "max-length": 6
   },
   */
-  "custom/cpu": {
-    "exec": "~/.config/waybar/scripts/cpu-usage.sh",
-    "return-type": "json",
-    "tooltip": true,
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "tooltip": false,
     "interval": 5,
     "min-length": 6,
     "max-length": 6
@@ -265,16 +266,11 @@
   },
 
   "clock#time": {
-    "format": "{:%I:%M}",
+    "format": "{:%H:%M}",
     "tooltip": true,
+    "tooltip-format": "Standard Time: {:%I:%M %p}",
     "min-length": 6,
-    "max-length": 6,
-    "tooltip-format": "{tz_list}",
-    "timezones": [
-        "Asia/Kathmandu",
-        "Etc/UTC",
-        "America/New_York",
-    ]
+    "max-length": 6
   },
 
   "clock#date": {
@@ -335,7 +331,7 @@
       "{device_alias}: {device_battery_percentage}%",
 
     "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-click-right": "alacritty --title '󰂯  Bluetooth TUI' bash -c bluetui",
+    "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
     "interval": 1,
     "min-length": 1,
     "max-length": 1
@@ -381,16 +377,6 @@
     "max-length": 6
   },
   /*
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "tooltip": false,
-    "on-scroll-up": "brightnessctl set 2%+",
-    "on-scroll-down": "brightnessctl set 2%-",
-    "min-length": 6,
-    "max-length": 6
-  },
-  */
   "custom/backlight": {
     "exec": "~/.config/waybar/scripts/brightness-control.sh",
     "return-type": "json",
@@ -399,6 +385,16 @@
     "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
     "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
     "interval": 1,
+    "min-length": 6,
+    "max-length": 6
+  },
+  */
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "tooltip": false,
+    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
     "min-length": 6,
     "max-length": 6
   },
@@ -419,10 +415,7 @@
     "min-length": 6,
     "max-length": 6
   },
-  "tray": {
-    "icon-size": 12,
-    "spacing": 4
-  },
+
   "custom/power": {
     "format": " ",
     "tooltip": true,

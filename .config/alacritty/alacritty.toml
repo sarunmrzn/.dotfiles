@@ -1,5 +1,5 @@
 [general]
-import = [ "~/.config/alacritty/tokyo-night.toml" ]
+import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
 
 [window]
   padding = {x = 0, y = 0}

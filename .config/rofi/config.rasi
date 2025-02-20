@@ -10,7 +10,7 @@ configuration{
     display-drun: " ";
     display-run: " ";
     display-window: " ";
-    
+
     //adding vim keybindings
     kb-row-up: "Up,Control+k";
     kb-row-left: "Left,Control+h";

@@ -6,43 +6,40 @@
 
 /* Main Colors */
 
-@define-color main-fg         #c0caf5; /* Tokyo Night Foreground */
-@define-color main-bg         #1a1b26; /* Tokyo Night Background */
-@define-color main-br         #c0caf5; /* Tokyo Night Foreground */
+@define-color main-fg         #cdd6f4;
+@define-color main-bg         #11111b;
+@define-color main-br         #cdd6f4;
 
-@define-color active-bg       #7aa2f7; /* Tokyo Night Blue */
-@define-color active-fg       #1a1b26; /* Tokyo Night Background */
+@define-color active-bg       #9399b2;
+@define-color active-fg       #11111b;
 
-@define-color hover-bg        #292e42; /* Tokyo Night Darker Blue */
-@define-color hover-fg        rgba(192, 202, 245, 0.75); /* Light Blue with Transparency */
+@define-color hover-bg        #313244;
+@define-color hover-fg        rgba(205, 214, 244, 0.75);
 
-@define-color white           #ffffff; /* White */
-@define-color black           #000000; /* Black */
+@define-color white           #ffffff;
+@define-color black           #000000;
 
 /* Module Colors */
 
-@define-color module-fg       #e0af68; /* Tokyo Night Yellow */
-@define-color workspaces      #1f2335; /* Tokyo Night Darker Base */
+@define-color module-fg       #f5e0dc;
+@define-color workspaces      #181825;
 
-/* Individual Module Colors */
+@define-color cpuinfo         #181825;
+@define-color memory          #1e1e2e;
+@define-color cpu             #313244;
+@define-color distro-fg       #000000;
+@define-color distro-bg       #9399b2;
+@define-color time            #313244;
+@define-color date            #1e1e2e;
+@define-color tray            #181825;
 
-@define-color cpuinfo         #1f2335; /* Tokyo Night Darker Base */
-@define-color memory          #292e42; /* Tokyo Night Darker Blue */
-@define-color cpu             #7dcfff; /* Tokyo Night Cyan */
-@define-color distro-fg       #000000; /* Black */
-@define-color distro-bg       #bb9af7; /* Tokyo Night Purple */
-@define-color time            #7aa2f7; /* Tokyo Night Blue */
-@define-color date            #292e42; /* Tokyo Night Darker Blue */
-@define-color tray            #1f2335; /* Tokyo Night Darker Base */
-
-@define-color pulseaudio      #1f2335; /* Tokyo Night Darker Base */
-@define-color backlight       #292e42; /* Tokyo Night Darker Blue */
-@define-color battery         #7dcfff; /* Tokyo Night Cyan */
-@define-color power           #f7768e; /* Tokyo Night Red */
+@define-color pulseaudio      #181825;
+@define-color backlight       #1e1e2e;
+@define-color battery         #313244;
+@define-color power           #9399b2;
 
 /* State Colors */
 
-@define-color warning         #e0af68; /* Tokyo Night Yellow */
-@define-color critical        #f7768e; /* Tokyo Night Red */
-@define-color charging        #c0caf5; /* Tokyo Night Foreground */
-
+@define-color warning         #f9e2af;
+@define-color critical        #f38ba8;
+@define-color charging        #cdd6f4;
