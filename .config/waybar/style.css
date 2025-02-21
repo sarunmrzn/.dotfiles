@@ -65,12 +65,9 @@ tooltip label {
 
 /* === General === */
 
-#custom-ws,
 #workspaces,
-#window,
 #custom-cpuinfo,
 #memory,
-/* #custom-cpu, */
 #cpu,
 #idle_inhibitor,
 #clock,
