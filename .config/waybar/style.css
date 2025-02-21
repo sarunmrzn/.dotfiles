@@ -45,7 +45,7 @@ tooltip label {
   border-radius: 8px;
   box-shadow: none;
   margin: 2px 0;
-  padding: 0 2px;
+  padding: 0 8px;
   transition: none;
 }
 #workspaces button:hover {
