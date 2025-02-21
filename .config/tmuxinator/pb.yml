@@ -1,7 +1,7 @@
 # /home/sarun/.config/tmuxinator/pb.yml
 
 name: pb
-root: ~/Code/proshore/Ruby/
+root: ~/Code/Proshore/Ruby/
 
 
 windows:

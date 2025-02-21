@@ -1,7 +1,7 @@
 # /home/sarun/.config/tmuxinator/cango.yml
 
 name: cango
-root: ~/Code/cango/cango-api/
+root: ~/Code/Cango/cango-api/
 
 windows:
   - editor: nvim
