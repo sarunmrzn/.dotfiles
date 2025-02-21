@@ -256,6 +256,11 @@ tooltip label {
 
 /* == Tray == */
 
+#tray {
+  background: @tray;
+  padding-right : 1px;
+}
+
 #custom-wifi {
   padding-left: 5px;
   padding-right: 8px;

@@ -8,8 +8,8 @@
   // === Positions ===
 
   "modules-left": [
-    "custom/ws",            // window icon
-    "custom/left1",
+    //"custom/ws",            // window icon
+    //"custom/left1",
 
     "hyprland/workspaces",  // workspaces
     "custom/right1",
@@ -43,10 +43,12 @@
     "clock#date",           // date
     "custom/right4",
 
-    "custom/wifi",          // wi-fi
-    "bluetooth",            // bluetooth
-    "custom/update",        // system update
-    "custom/right5"
+    //"custom/wifi",          // wi-fi
+    //"bluetooth",            // bluetooth
+    //"custom/update",        // system update
+    "tray",
+    "custom/right5",
+
   ],
 
   "modules-right": [
@@ -509,5 +511,10 @@
   "custom/rightin1": {
     "format": "",
     "tooltip": false
+  },
+
+  "tray": {
+      "icon-size": 12,
+      "spacing": 8 
   }
 }
