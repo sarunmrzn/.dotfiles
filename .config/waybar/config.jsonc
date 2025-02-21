@@ -8,9 +8,6 @@
   // === Positions ===
 
   "modules-left": [
-    //"custom/ws",            // window icon
-    //"custom/left1",
-
     "hyprland/workspaces",  // workspaces
     "custom/right1",
 
@@ -27,7 +24,6 @@
     "memory",               // memory
 
     "custom/left4",
-    // "custom/cpu",           // cpu
     "cpu",                  // cpu
     "custom/leftin1",
 
@@ -43,12 +39,8 @@
     "clock#date",           // date
     "custom/right4",
 
-    //"custom/wifi",          // wi-fi
-    //"bluetooth",            // bluetooth
-    //"custom/update",        // system update
     "tray",
     "custom/right5",
-
   ],
 
   "modules-right": [
@@ -58,24 +50,14 @@
     "pulseaudio",           // output device
 
     "custom/left7",
-    // "custom/backlight",     // brightness
     "backlight",            // brightness
 
     "custom/left8",
     "battery",              // battery
-
-    "custom/leftin2",
-    "custom/power"          // power button
+    "custom/empty",
   ],
 
   // === Modules ===
-
-  "custom/ws": {
-    "format": "  ",
-    "tooltip": false,
-    "min-length": 3,
-    "max-length": 3
-  },
 
   "hyprland/workspaces": {
     "on-scroll-up": "hyprctl dispatch workspace -1",
@@ -230,16 +212,7 @@
     "min-length": 7,
     "max-length": 7
   },
-  /*
-  "custom/cpu": {
-    "exec": "~/.config/waybar/scripts/cpu-usage.sh",
-    "return-type": "json",
-    "tooltip": true,
-    "interval": 5,
-    "min-length": 6,
-    "max-length": 6
-  },
-  */
+
   "cpu": {
     "format": "󰻠 {usage}%",
     "tooltip": false,
@@ -303,53 +276,6 @@
     "max-length": 8
   },
 
-  "custom/wifi": {
-    "exec": "~/.config/waybar/scripts/wifi-status.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
-    "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 1
-  },
-
-  "bluetooth": {
-    "format": "󰂰",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
-    "format-connected-battery": "󰂱",
-
-    "tooltip-format": 
-      "{num_connections} connected",
-    "tooltip-format-disabled": 
-      "Bluetooth Disabled",
-    "tooltip-format-connected": 
-      "{num_connections} connected\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
-      "{device_alias}: {device_battery_percentage}%",
-
-    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 1
-  },
-
-  "custom/update": {
-    "exec": "~/.config/waybar/scripts/system-update.sh",
-    "return-type": "json",
-    "format": "{}",
-    "on-click": "hyprctl dispatch exec '~/.config/waybar/scripts/system-update.sh up'",
-    "interval": 30,
-    "tooltip": true,
-    "min-length": 1,
-    "max-length": 1
-  },
-
   "custom/media": {
     "exec": "~/.config/waybar/scripts/media-player.py",
     "return-type": "json",
@@ -378,19 +304,7 @@
     "min-length": 6,
     "max-length": 6
   },
-  /*
-  "custom/backlight": {
-    "exec": "~/.config/waybar/scripts/brightness-control.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
-    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
-    "interval": 1,
-    "min-length": 6,
-    "max-length": 6
-  },
-  */
+
   "backlight": {
     "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
@@ -416,13 +330,6 @@
     "interval": 1,
     "min-length": 6,
     "max-length": 6
-  },
-
-  "custom/power": {
-    "format": " ",
-    "tooltip": true,
-    "tooltip-format": "Power Menu",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh"
   },
 
   // === Padding ===
@@ -510,6 +417,11 @@
 
   "custom/rightin1": {
     "format": "",
+    "tooltip": false
+  },
+
+  "custom/empty": {
+    "format": "",
     "tooltip": false
   },
 
