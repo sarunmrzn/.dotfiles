@@ -135,7 +135,7 @@
         "weekdays": 
           "<span color='#a6adc8' font='7'>{}</span>",
         "today": 
-          "<span color='#f38ba8'><b>{}</b></span>"
+          "<span color='#39FF14'><b>{}</b></span>"
       }
     },
     "actions": {

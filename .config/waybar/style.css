@@ -14,13 +14,11 @@
 
 /* Main Container */
 window#waybar {
-  background: @background;
+  background: transparent;
 }
 
 window#waybar > box {
   background-color: transparent;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 1);
-  margin: 1px;
 }
 
 /* Tooltip Styles */
@@ -39,6 +37,7 @@ tooltip label {
 }
 
 /* Workspace Buttons */
+
 #workspaces button {
   color: @foreground;
   border-radius: 8px;
@@ -113,13 +112,13 @@ tooltip label {
 
 /* Workspaces */
 #workspaces {
-  background: @background;
+  background: transparent;
 }
 
 /* Temperature */
 #custom-left1 {
   color: @color1;
-  background: @background;
+  background: transparent;
   padding-left: 3px;
 }
 
@@ -167,7 +166,7 @@ tooltip label {
 /* Distro Icon */
 #custom-left4 {
   color: @color10;
-  background: @background;
+  background: transparent;
   text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);
   margin-bottom: -2px;
   padding-left: 3px;
@@ -184,7 +183,7 @@ tooltip label {
 
 #custom-right1 {
   color: @color10;
-  background: @background;
+  background: transparent;
   margin-bottom: -2px;
 }
 
@@ -240,7 +239,7 @@ tooltip label {
 
 #custom-right4 {
   color: @color1;
-  background: @background;
+  background: transparent;
 }
 
 /* Media Controls */
