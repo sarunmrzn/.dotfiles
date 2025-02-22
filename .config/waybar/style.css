@@ -122,11 +122,11 @@ tooltip label {
 }
 
 #custom-cpuinfo {
-  background: @color4;
+  background: @color1;
 }
 
 #custom-left2 {
-  color: @color4;
+  color: @color1;
   background: @background;
   padding-left: 3px;
 }
@@ -135,14 +135,16 @@ tooltip label {
 
 #custom-left3 {
   color: @color8;
-  background: @color4;
+  background: @color1;
   padding-left: 3px;
 }
+
 #memory {
   background: @color8;
   padding-left: 1px;
   padding-right: 0;
 }
+
 #memory.warning {
   color: @color10;
 }
@@ -229,18 +231,18 @@ tooltip label {
 }
 #custom-right4 {
   color: @color8;
-  background: @color4;
+  background: @color1;
 }
 
 /* == Tray == */
 
 #tray {
-  background: @color4;
+  background: @color1;
   padding-right : 1px;
 }
 
 #custom-right5 {
-  color: @color4;
+  color: @color1;
   background: @background;
 }
 
