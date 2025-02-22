@@ -31,10 +31,9 @@
     "custom/distro",
     "custom/right1",
 
-    // Inhibitor
+    // Inhibitor and time
     "custom/rightin1",
     "idle_inhibitor",
-    // Time
     "clock#time",
     "custom/right2",
 
@@ -48,18 +47,18 @@
   ],
 
   "modules-right": [
-    // Mediak
+    // Media
     "custom/media",
 
-    "custom/left6",
+    "custom/left5",
     // Audio
     "pulseaudio",
 
-    "custom/left7",
+    "custom/left6",
     // Backlight
     "backlight",
 
-    "custom/left8",
+    "custom/left7",
     // Battery
     "battery",
     "custom/empty",

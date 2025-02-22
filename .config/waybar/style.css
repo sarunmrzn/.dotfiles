@@ -268,7 +268,7 @@ tooltip label {
 }
 
 /* Audio Controls */
-#custom-left6 {
+#custom-left5 {
   color: @color14;
   background: @background;
   padding-left: 3px;
@@ -285,7 +285,7 @@ tooltip label {
 }
 
 /* Brightness */
-#custom-left7 {
+#custom-left6 {
   color: @color13;
   background: @color14;
   padding-left: 2px;
@@ -296,7 +296,7 @@ tooltip label {
 }
 
 /* Battery */
-#custom-left8 {
+#custom-left7 {
   color: @color15;
   background: @color13;
   padding-left: 2px;
@@ -351,11 +351,6 @@ tooltip label {
 /* Override font sizes for specific elements */
 #custom-distro {
   font-size: 14.6px;
-}
-
-#custom-left5,
-#custom-right1 {
-  font-size: 15.68px;
 }
 
 /* Import animations */
