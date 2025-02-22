@@ -2,7 +2,7 @@
 import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
 
 [window]
-  padding = {x = 0, y = 0}
+  padding = {x = 1, y = 1}
   dynamic_padding = true
   decorations = "None"
   startup_mode = "Maximized"
