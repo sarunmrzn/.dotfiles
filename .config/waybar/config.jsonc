@@ -9,9 +9,6 @@
 
   "modules-left": [
     "hyprland/workspaces",  // workspaces
-    "custom/right1",
-
-    "custom/paddw",
     "hyprland/window"       // window title
   ],
 

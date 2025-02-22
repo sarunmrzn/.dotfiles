@@ -41,7 +41,7 @@ tooltip label {
 /* === Workspace Buttons === */
 
 #workspaces button {
-  color: @module-fg;
+  color: @foreground;
   border-radius: 8px;
   box-shadow: none;
   margin: 2px 0;
@@ -55,8 +55,8 @@ tooltip label {
   box-shadow: none;
 }
 #workspaces button.active {
-  color: @color2;
-  background: @color1;
+  color: @color0;
+  background: @color3;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
   margin: 2px;
@@ -81,7 +81,7 @@ tooltip label {
 #battery,
 #custom-power {
   opacity: 1;
-  color: @color5;
+  color: @f;
   padding: 0 4px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
@@ -110,28 +110,10 @@ tooltip label {
 
 /* === Modules === */
 
-/* == Window Icon == */
-
-#custom-ws {
-  background: @background;
-}
-
 /* == Workspaces == */
 
-#custom-left1 {
-  color: @workspaces;
-  background: @background;
-  margin-bottom: 0;
-  padding-left: 2px;
-}
 #workspaces {
-  background: @workspaces;
-}
-#custom-right1 {
-  color: @workspaces;
   background: @background;
-  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
-  margin-bottom: 0;
 }
 
 /* == Temperature == */
@@ -143,11 +125,6 @@ tooltip label {
   color: @color6;
   background: @background;
   padding-left: 3px;
-}
-#custom-cpuinfo {
-  background: @color6;
-  padding-left: 1px;
-  padding-right: 0;
 }
 
 /* == Memory == */
@@ -172,7 +149,7 @@ tooltip label {
 /* == CPU == */
 
 #custom-left4 {
-  color: @color8;
+  color: @color11;
   background: @color7;
   padding-left: 3px;
 }
@@ -182,10 +159,10 @@ tooltip label {
 }
 */
 #cpu {
-  background: @color8;
+  background: @color11;
 }
 #custom-leftin1 {
-  color: @color8;
+  color: @color11;
   margin-bottom: -1px;
 }
 
@@ -223,7 +200,7 @@ tooltip label {
   padding: 0 0 0 7px;
 }
 #idle_inhibitor:hover {
-  color: @hover-fg;
+  color: @foreground;
   text-shadow: none;
   box-shadow: none;
 }
@@ -233,21 +210,21 @@ tooltip label {
 }
 #custom-right3 {
   color: @color11;
-  background: @color12;
+  background: @color8;
 }
 
 /* == Date == */
 
 #clock.date {
-  background: @color12;
+  background: @color8;
 }
 #clock.date:hover {
-  color: @hover-fg;
+  color: @foreground;
   text-shadow: none;
   box-shadow: none;
 }
 #custom-right4 {
-  color: @color12;
+  color: @color8;
   background: @color13;
 }
 
