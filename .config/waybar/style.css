@@ -86,8 +86,7 @@ tooltip label {
 #custom-left3,
 #custom-left4,
 #custom-left5,
-#custom-left6,
-#custom-left7 {
+#custom-left6 {
   margin-bottom: 0;
   text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
   font-size: 14.68px;
@@ -259,42 +258,28 @@ tooltip label {
 }
 
 /* Tray */
-#custom-left7 {
+#custom-left5 {
   color: @color13;
-  padding-left: 2px;
+  padding-left: 3px;
 }
-
 #tray {
   background: @color13;
   padding-right: 1px;
 }
 
-/* Date */
-#custom-left5 {
+/* Date Time*/
+#custom-left6 {
   color: @color14;
   background: @color13;
-  padding-left: 3px;
-}
-
-#clock.date {
-  background: @color14;
-}
-
-#clock.date:hover {
-  color: @foreground;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-/* Time */
-#custom-left6 {
-  color: @color11;
-  background: @color14;
   padding-left: 2px;
 }
 
+#clock {
+  background: @color14;
+}
+
 #idle_inhibitor {
-  background: @color11;
+  background: @color14;
   margin-right: -2px;
   padding: 0 0 0 7px;
 }
@@ -303,11 +288,6 @@ tooltip label {
   color: @foreground;
   text-shadow: none;
   box-shadow: none;
-}
-
-#clock.time {
-  background: @color11;
-  padding: 0 3px 0 0;
 }
 
 /* Import animations */
