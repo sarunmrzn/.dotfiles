@@ -193,7 +193,7 @@ tooltip label {
   font-size: 14.6px;
 }
 
-#custom-right2 {
+#custom-right1 {
   color: @color10;
   background: @background;
   margin-bottom: -2px;
@@ -222,7 +222,7 @@ tooltip label {
   padding: 0 3px 0 0;
 }
 
-#custom-right3 {
+#custom-right2 {
   color: @color11;
   background: @color8;
 }
@@ -237,7 +237,7 @@ tooltip label {
   box-shadow: none;
 }
 
-#custom-right4 {
+#custom-right3 {
   color: @color8;
   background: @color1;
 }
@@ -248,7 +248,7 @@ tooltip label {
   padding-right: 1px;
 }
 
-#custom-right5 {
+#custom-right4 {
   color: @color1;
   background: @background;
 }
@@ -354,7 +354,7 @@ tooltip label {
 }
 
 #custom-left5,
-#custom-right2 {
+#custom-right1 {
   font-size: 15.68px;
 }
 

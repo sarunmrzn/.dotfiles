@@ -29,22 +29,22 @@
     // Distro
     "custom/left4",
     "custom/distro",
-    "custom/right2",
+    "custom/right1",
 
-    "custom/rightin1",
     // Inhibitor
+    "custom/rightin1",
     "idle_inhibitor",
     // Time
     "clock#time",
-    "custom/right3",
+    "custom/right2",
 
     // Date
     "clock#date",
-    "custom/right4",
+    "custom/right3",
 
     // Tray
     "tray",
-    "custom/right5",
+    "custom/right4",
   ],
 
   "modules-right": [
