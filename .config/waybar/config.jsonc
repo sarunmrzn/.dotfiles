@@ -50,18 +50,17 @@
     // Media
     "custom/media",
 
-    "custom/left5",
     // Audio
+    "custom/left5",
     "pulseaudio",
 
-    "custom/left6",
     // Backlight
+    "custom/left6",
     "backlight",
 
-    "custom/left7",
     // Battery
+    "custom/left7",
     "battery",
-    "custom/empty",
   ],
 
   // === Modules ===
