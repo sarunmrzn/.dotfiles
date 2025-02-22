@@ -81,7 +81,6 @@ tooltip label {
 #battery,
 #custom-power {
   opacity: 1;
-  color: @f;
   padding: 0 4px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
@@ -121,8 +120,13 @@ tooltip label {
 #custom-paddc {
   padding-right: 22px;
 }
+
+#custom-cpuinfo {
+  background: @color4;
+}
+
 #custom-left2 {
-  color: @color6;
+  color: @color4;
   background: @background;
   padding-left: 3px;
 }
@@ -130,27 +134,27 @@ tooltip label {
 /* == Memory == */
 
 #custom-left3 {
-  color: @color7;
-  background: @color6;
+  color: @color8;
+  background: @color4;
   padding-left: 3px;
 }
 #memory {
-  background: @color7;
+  background: @color8;
   padding-left: 1px;
   padding-right: 0;
 }
 #memory.warning {
-  color: @color13;
+  color: @color10;
 }
 #memory.critical {
-  color: @color12;
+  color: @color11;
 }
 
 /* == CPU == */
 
 #custom-left4 {
   color: @color11;
-  background: @color7;
+  background: @color8;
   padding-left: 3px;
 }
 /*
@@ -225,48 +229,18 @@ tooltip label {
 }
 #custom-right4 {
   color: @color8;
-  background: @color13;
+  background: @color4;
 }
 
 /* == Tray == */
 
 #tray {
-  background: @color13;
+  background: @color4;
   padding-right : 1px;
 }
 
-#custom-wifi {
-  padding-left: 5px;
-  padding-right: 8px;
-  background: @color13;
-}
-#custom-wifi:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#bluetooth {
-  padding-right: 5px;
-  background: @color13;
-}
-#bluetooth:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#custom-update {
-  padding-right: 8px;
-  background: @color13;
-}
-#custom-update:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
 #custom-right5 {
-  color: @color13;
+  color: @color4;
   background: @background;
 }
 
@@ -303,7 +277,7 @@ tooltip label {
 /* == Brightness == */
 
 #custom-left7 {
-  color: @color15;
+  color: @color13;
   background: @color14;
   padding-left: 2px;
 }
@@ -313,14 +287,14 @@ tooltip label {
 }
 */
 #backlight {
-  background: @color15;
+  background: @color13;
 }
 
 /* == Battery == */
 
 #custom-left8 {
   color: @color15;
-  background: @color15;
+  background: @color13;
   padding-left: 2px;
 }
 #battery {
@@ -328,13 +302,13 @@ tooltip label {
   background: @color15;
 }
 #battery.warning {
-  color: @color13;
+  color: @color10;
 }
 #battery.critical {
-  color: @color12;
+  color: @color11;
 }
 #battery.charging {
-  color: @color11;
+  color: @color12;
 }
 
 /* == Power Button == */
