@@ -6,6 +6,7 @@
   padding: 0;
   border: none;
   margin: 0;
+  font-size: 10px;
 }
 
 /* Import color scheme */
@@ -105,7 +106,6 @@ tooltip label {
 
 /* Inverse Arrow Styles */
 #custom-leftin1,
-#custom-leftin2,
 #custom-rightin1 {
   font-size: 15.5px;
 }
@@ -308,16 +308,6 @@ tooltip label {
 #clock.time {
   background: @color11;
   padding: 0 3px 0 0;
-}
-
-/* Font Sizes */
-* {
-  font-size: 10px;
-}
-
-/* Override font sizes for specific elements */
-#custom-distro {
-  font-size: 14.6px;
 }
 
 /* Import animations */

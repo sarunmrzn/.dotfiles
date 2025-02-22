@@ -169,7 +169,7 @@
     "tooltip": "{tooltip}",
     "on-click": "playerctl play-pause",
     "min-length": 5,
-    "max-length": 35
+    "max-length": 40
   },
 
   "pulseaudio": {
@@ -271,10 +271,6 @@
   // == Left Inverse ==
 
   "custom/leftin1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/leftin2": {
     "format": "",
     "tooltip": false
   },
