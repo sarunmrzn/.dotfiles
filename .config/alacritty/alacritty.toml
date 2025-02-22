@@ -1,5 +1,6 @@
 [general]
-import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
+# import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
+import = [ "~/.cache/wal/colors-alacritty.toml" ]
 
 [window]
   padding = {x = 1, y = 1}

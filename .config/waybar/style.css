@@ -7,12 +7,12 @@
   margin: 0;
 }
 
-@import "theme.css";
+@import "/home/sarun/.cache/wal/colors-waybar.css";
 
 /* === Main Background === */
 
 window#waybar {
-  background: @main-bg;
+  background: @background;
 }
 
 /* === Drop Shadow === */
@@ -26,14 +26,14 @@ window#waybar > box {
 /* === Tooltip === */
 
 tooltip {
-  background: @main-bg;
+  background: @background;
   border: solid;
   border-width: 1.5px;
   border-radius: 8px;
-  border-color: @main-br;
+  border-color: @color0;
 }
 tooltip label {
-  color: @main-fg;
+  color: @foreground;
   font-weight: normal;
   margin: -1.5px 3px;
 }
@@ -49,14 +49,14 @@ tooltip label {
   transition: none;
 }
 #workspaces button:hover {
-  color: @hover-fg;
-  background: @hover-bg;
+  color: @color4;
+  background: @color3;
   text-shadow: none;
   box-shadow: none;
 }
 #workspaces button.active {
-  color: @active-fg;
-  background: @active-bg;
+  color: @color2;
+  background: @color1;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
   margin: 2px;
@@ -81,7 +81,7 @@ tooltip label {
 #battery,
 #custom-power {
   opacity: 1;
-  color: @module-fg;
+  color: @color5;
   padding: 0 4px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
@@ -113,14 +113,14 @@ tooltip label {
 /* == Window Icon == */
 
 #custom-ws {
-  background: @main-bg;
+  background: @background;
 }
 
 /* == Workspaces == */
 
 #custom-left1 {
   color: @workspaces;
-  background: @main-bg;
+  background: @background;
   margin-bottom: 0;
   padding-left: 2px;
 }
@@ -129,7 +129,7 @@ tooltip label {
 }
 #custom-right1 {
   color: @workspaces;
-  background: @main-bg;
+  background: @background;
   text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
   margin-bottom: 0;
 }
@@ -140,12 +140,12 @@ tooltip label {
   padding-right: 22px;
 }
 #custom-left2 {
-  color: @cpuinfo;
-  background: @main-bg;
+  color: @color6;
+  background: @background;
   padding-left: 3px;
 }
 #custom-cpuinfo {
-  background: @cpuinfo;
+  background: @color6;
   padding-left: 1px;
   padding-right: 0;
 }
@@ -153,72 +153,72 @@ tooltip label {
 /* == Memory == */
 
 #custom-left3 {
-  color: @memory;
-  background: @cpuinfo;
+  color: @color7;
+  background: @color6;
   padding-left: 3px;
 }
 #memory {
-  background: @memory;
+  background: @color7;
   padding-left: 1px;
   padding-right: 0;
 }
 #memory.warning {
-  color: @warning;
+  color: @color13;
 }
 #memory.critical {
-  color: @critical;
+  color: @color12;
 }
 
 /* == CPU == */
 
 #custom-left4 {
-  color: @cpu;
-  background: @memory;
+  color: @color8;
+  background: @color7;
   padding-left: 3px;
 }
 /*
 #custom-cpu {
-  background: @cpu;
+  background: @color8;
 }
 */
 #cpu {
-  background: @cpu;
+  background: @color8;
 }
 #custom-leftin1 {
-  color: @cpu;
+  color: @color8;
   margin-bottom: -1px;
 }
 
 /* == Distro Icon == */
 
 #custom-left5 {
-  color: @distro-bg;
-  background: @main-bg;
+  color: @color10;
+  background: @background;
   text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);
   margin-bottom: -2px;
   padding-left: 3px;
 }
 #custom-distro {
-  color: @distro-fg;
-  background: @distro-bg;
+  color: @color9;
+  background: @color10;
   margin: 0 -1px -2px 0;
   padding: 0 0 0 3px;
   text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 #custom-right2 {
-  color: @distro-bg;
-  background: @main-bg;
+  color: @color10;
+  background: @background;
   margin-bottom: -2px;
 }
 
 /* == Time == */
 
 #custom-rightin1 {
-  color: @time;
+  color: @color11;
   margin-bottom: -1px;
 }
 #idle_inhibitor {
-  background: @time;
+  background: @color11;
   margin-right: -2px;
   padding: 0 0 0 7px;
 }
@@ -228,18 +228,18 @@ tooltip label {
   box-shadow: none;
 }
 #clock.time {
-  background: @time;
+  background: @color11;
   padding: 0 3px 0 0;
 }
 #custom-right3 {
-  color: @time;
-  background: @date;
+  color: @color11;
+  background: @color12;
 }
 
 /* == Date == */
 
 #clock.date {
-  background: @date;
+  background: @color12;
 }
 #clock.date:hover {
   color: @hover-fg;
@@ -247,21 +247,21 @@ tooltip label {
   box-shadow: none;
 }
 #custom-right4 {
-  color: @date;
-  background: @tray;
+  color: @color12;
+  background: @color13;
 }
 
 /* == Tray == */
 
 #tray {
-  background: @tray;
+  background: @color13;
   padding-right : 1px;
 }
 
 #custom-wifi {
   padding-left: 5px;
   padding-right: 8px;
-  background: @tray;
+  background: @color13;
 }
 #custom-wifi:hover {
   color: @hover-fg;
@@ -271,7 +271,7 @@ tooltip label {
 
 #bluetooth {
   padding-right: 5px;
-  background: @tray;
+  background: @color13;
 }
 #bluetooth:hover {
   color: @hover-fg;
@@ -281,7 +281,7 @@ tooltip label {
 
 #custom-update {
   padding-right: 8px;
-  background: @tray;
+  background: @color13;
 }
 #custom-update:hover {
   color: @hover-fg;
@@ -289,15 +289,15 @@ tooltip label {
   box-shadow: none;
 }
 #custom-right5 {
-  color: @tray;
-  background: @main-bg;
+  color: @color13;
+  background: @background;
 }
 
 /* == Media Info == */
 
 #custom-media {
   font-weight: normal;
-  background-color: @main-bg;
+  background-color: @background;
   padding-right: 8px;
   padding-left: 8px;
 }
@@ -310,12 +310,12 @@ tooltip label {
 /* == Output Device == */
 
 #custom-left6 {
-  color: @pulseaudio;
-  background: @main-bg;
+  color: @color14;
+  background: @background;
   padding-left: 3px;
 }
 #pulseaudio {
-  background: @pulseaudio;
+  background: @color14;
 }
 #pulseaudio:hover {
   color: @hover-fg;
@@ -326,50 +326,50 @@ tooltip label {
 /* == Brightness == */
 
 #custom-left7 {
-  color: @backlight;
-  background: @pulseaudio;
+  color: @color15;
+  background: @color14;
   padding-left: 2px;
 }
 /*
 #custom-backlight {
-  background: @backlight;
+  background: @color15;
 }
 */
 #backlight {
-  background: @backlight;
+  background: @color15;
 }
 
 /* == Battery == */
 
 #custom-left8 {
-  color: @battery;
-  background: @backlight;
+  color: @color15;
+  background: @color15;
   padding-left: 2px;
 }
 #battery {
-  color: @module-fg;
-  background: @battery;
+  color: @color5;
+  background: @color15;
 }
 #battery.warning {
-  color: @warning;
+  color: @color13;
 }
 #battery.critical {
-  color: @critical;
+  color: @color12;
 }
 #battery.charging {
-  color: @charging;
+  color: @color11;
 }
 
 /* == Power Button == */
 
 #custom-leftin2 {
-  color: @battery;
-  background: @main-bg;
+  color: @color15;
+  background: @background;
   margin-bottom: -1px;
 }
 #custom-power {
-  color: @main-bg;
-  background: @power;
+  color: @background;
+  background: @color14;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -378,7 +378,7 @@ tooltip label {
 }
 #custom-power:hover {
   color: @hover-fg;
-  background: @hover-bg;
+  background: @color3;
   text-shadow: none;
   box-shadow: none;
 }
@@ -450,7 +450,7 @@ tooltip label {
 
   - `distro_expand` for the distro icon (line 143)
   - `power_expand` for the power button (line 158)
-  - `module_expand` for all other modules (line 172)
+  - `module_expand` for all other modules (line 142)
 */
 
 @import "animation.css";
