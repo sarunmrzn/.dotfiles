@@ -2,6 +2,14 @@
   NOTE: Restart Waybar to apply changes.
 */
 
+/* Animation Base Properties */
+.module-animation {
+  opacity: 0;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
 /* <<--< PHASE 1 >-->> */
 
 #custom-ws {
@@ -14,14 +22,16 @@
   color: transparent;
   font-size: 0;
   text-shadow: none;
-  animation: distro_expand 0.25s ease-in 0.25s forwards,
+  animation: 
+    distro_expand 0.25s ease-in 0.25s forwards,
     distro_in 0.25s ease-in 0.5s forwards;
 }
 
 #custom-power {
   font-size: 0;
   text-shadow: none;
-  animation: power_expand 0.25s ease-in 0.25s forwards,
+  animation: 
+    power_expand 0.25s ease-in 0.25s forwards,
     power_in 0.25s ease-in 0.5s forwards;
 }
 
@@ -42,7 +52,8 @@
 #battery.charging {
   font-size: 0;
   text-shadow: none;
-  animation: module_expand 0.25s ease-in 0.75s forwards,
+  animation: 
+    module_expand 0.25s ease-in 0.75s forwards,
     module_in 0.25s ease-in 1s forwards;
 }
 
@@ -68,17 +79,20 @@
 }
 
 #battery.warning {
-  animation: module_expand 0.25s ease-in 0.75s forwards,
+  animation: 
+    module_expand 0.25s ease-in 0.75s forwards,
     state_warning_in 0.25s ease-in 1s forwards;
 }
 
 #battery.critical {
-  animation: module_expand 0.25s ease-in 0.75s forwards,
+  animation: 
+    module_expand 0.25s ease-in 0.75s forwards,
     state_critical_in 0.25s ease-in 1s forwards;
 }
 
 #battery.charging {
-  animation: module_expand 0.25s ease-in 0.75s forwards,
+  animation: 
+    module_expand 0.25s ease-in 0.75s forwards,
     state_charging_in 0.25s ease-in 1s forwards;
 }
 
@@ -90,7 +104,8 @@
   color: transparent;
   font-size: 0;
   text-shadow: none;
-  animation: module_expand 0.25s ease-in 1.15s forwards,
+  animation: 
+    module_expand 0.25s ease-in 1.15s forwards,
     module_in 0.25s ease-in 1.4s forwards;
 }
 
@@ -98,7 +113,8 @@
   color: transparent;
   font-size: 0;
   text-shadow: none;
-  animation: module_expand 0.25s ease-in 1.15s forwards,
+  animation: 
+    module_expand 0.25s ease-in 1.15s forwards,
     state_warning_in 0.25s ease-in 1.4s forwards;
 }
 
@@ -106,13 +122,15 @@
   color: transparent;
   font-size: 0;
   text-shadow: none;
-  animation: module_expand 0.25s ease-in 1.15s forwards,
+  animation: 
+    module_expand 0.25s ease-in 1.15s forwards,
     state_critical_in 0.25s ease-in 1.4s forwards;
 }
 
 #clock.date {
   font-size: 0;
-  animation: module_expand 0.25s ease-in 1.15s forwards,
+  animation: 
+    module_expand 0.25s ease-in 1.15s forwards,
     hoverable_in 0.25s ease-in 1.4s forwards;
 }
 
@@ -130,7 +148,8 @@
 #custom-update,
 #pulseaudio {
   font-size: 0;
-  animation: module_expand 0.25s ease-in 1.5s forwards,
+  animation: 
+    module_expand 0.25s ease-in 1.5s forwards,
     hoverable_in 0.25s ease-in 1.75s forwards;
 }
 

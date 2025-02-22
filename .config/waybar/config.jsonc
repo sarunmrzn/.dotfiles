@@ -75,11 +75,24 @@
     // === Window Titles ===
 
     "rewrite": {
-      // == Desktop ==
-
-      "": 
-        "<span foreground='#89b4fa'> </span> Hyprland",
-
+      // Applications
+      "": "<span foreground='#89b4fa'> </span> Hyprland",
+      
+      // Development Tools
+      "(.*)Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span> $1",
+      "nvim(.*)": "<span foreground='#a6e3a1'> </span> $1",
+      "vim(.*)": "<span foreground='#a6e3a1'> </span> $1",
+      "Godot(.*)": "<span foreground='#89b4fa'> </span> $1",
+      
+      // Browsers
+      "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span> $1",
+      "(.*)Zen Browser": "<span foreground='#cdd6f4'>󰈹 </span> $1",
+      
+      // Media Applications
+      "(.*)Spotify(.*)": "<span foreground='#a6e3a1'> </span> $1",
+      "OBS(.*)": "<span foreground='#a6adc8'>󰐌 </span> OBS Studio",
+      "VLC(.*)": "<span foreground='#fab387'>󰕼 </span> $1",
+      
       // == Terminal ==
 
       "~": "  Terminal",
@@ -88,34 +101,10 @@
       "sejjy@archlinux:(.*)": "  Terminal",
       "(.*)sejjy@archlinux:~": "  Terminal",
 
-      // == Browser ==
-
-      "(.*)Mozilla Firefox": 
-        "<span foreground='#f38ba8'>󰈹 </span> Firefox",
-      "(.*) — Mozilla Firefox": 
-        "<span foreground='#f38ba8'>󰈹 </span> $1",
-
-      "(.*)Zen Browser": 
-        "<span foreground='#cdd6f4'>󰈹 </span> Zen Browser",
-      "(.*) — Zen Browser": 
-        "<span foreground='#cdd6f4'>󰈹 </span> $1",
-
       // == Development ==
 
       "(.*) - Visual Studio Code": 
         "<span foreground='#89b4fa'>󰨞 </span> $1",
-      "(.*)Visual Studio Code": 
-        "<span foreground='#89b4fa'>󰨞 </span> Visual Studio Code",
-
-      "nvim": 
-        "<span foreground='#a6e3a1'> </span> Neovim",
-      "nvim (.*)": 
-        "<span foreground='#a6e3a1'> </span> $1",
-
-      "vim": 
-        "<span foreground='#a6e3a1'> </span> Vim",
-      "vim (.*)": 
-        "<span foreground='#a6e3a1'> </span> $1",
 
       "Godot": 
         "<span foreground='#89b4fa'> </span> Godot Engine",
@@ -131,16 +120,8 @@
       "(.*)Spotify Premium": 
         "<span foreground='#a6e3a1'> </span> Spotify Premium",
 
-      "OBS(.*)": 
-        "<span foreground='#a6adc8'>󰐌 </span> OBS Studio",
-
-      "VLC media player": 
-        "<span foreground='#fab387'>󰕼 </span> VLC Media Player",
       "(.*) - VLC media player": 
         "<span foreground='#fab387'>󰕼 </span> $1",
-
-      "(.*) - mpv": 
-        "<span foreground='#cba6f7'> </span> $1",
 
       "GNU Image Manipulation Program": 
         "<span foreground='#a6adc8'> </span> GNU Image Manipulation Program",

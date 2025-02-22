@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
@@ -7,15 +8,13 @@
   margin: 0;
 }
 
+/* Import color scheme */
 @import "/home/sarun/.cache/wal/colors-waybar.css";
 
-/* === Main Background === */
-
+/* Main Container */
 window#waybar {
   background: @background;
 }
-
-/* === Drop Shadow === */
 
 window#waybar > box {
   background-color: transparent;
@@ -23,8 +22,7 @@ window#waybar > box {
   margin: 1px;
 }
 
-/* === Tooltip === */
-
+/* Tooltip Styles */
 tooltip {
   background: @background;
   border: solid;
@@ -32,14 +30,14 @@ tooltip {
   border-radius: 8px;
   border-color: @color0;
 }
+
 tooltip label {
   color: @foreground;
   font-weight: normal;
   margin: -1.5px 3px;
 }
 
-/* === Workspace Buttons === */
-
+/* Workspace Buttons */
 #workspaces button {
   color: @foreground;
   border-radius: 8px;
@@ -48,12 +46,14 @@ tooltip label {
   padding: 0 8px;
   transition: none;
 }
+
 #workspaces button:hover {
   color: @color4;
   background: @color3;
   text-shadow: none;
   box-shadow: none;
 }
+
 #workspaces button.active {
   color: @color0;
   background: @color3;
@@ -63,8 +63,7 @@ tooltip label {
   padding: 0 6px;
 }
 
-/* === General === */
-
+/* Common Module Styles */
 #workspaces,
 #custom-cpuinfo,
 #memory,
@@ -76,7 +75,6 @@ tooltip label {
 #custom-update,
 #custom-media,
 #pulseaudio,
-/* #custom-backlight, */
 #backlight,
 #battery,
 #custom-power {
@@ -85,6 +83,7 @@ tooltip label {
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
+/* Arrow Styles - Left */
 #custom-left1,
 #custom-left2,
 #custom-left3,
@@ -95,8 +94,10 @@ tooltip label {
 #custom-left8 {
   margin-bottom: 0;
   text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+  font-size: 14.68px;
 }
 
+/* Arrow Styles - Right */
 #custom-right1,
 #custom-right2,
 #custom-right3,
@@ -105,18 +106,24 @@ tooltip label {
   margin-bottom: 0;
   padding-right: 3px;
   text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+  font-size: 14.68px;
 }
 
-/* === Modules === */
+/* Inverse Arrow Styles */
+#custom-leftin1,
+#custom-leftin2,
+#custom-rightin1 {
+  font-size: 15.5px;
+}
 
-/* == Workspaces == */
+/* Module-Specific Styles */
 
+/* Workspaces */
 #workspaces {
   background: @background;
 }
 
-/* == Temperature == */
-
+/* Temperature */
 #custom-paddc {
   padding-right: 22px;
 }
@@ -131,8 +138,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-/* == Memory == */
-
+/* Memory */
 #custom-left3 {
   color: @color8;
   background: @color1;
@@ -148,32 +154,28 @@ tooltip label {
 #memory.warning {
   color: @color10;
 }
+
 #memory.critical {
   color: @color11;
 }
 
-/* == CPU == */
-
+/* CPU */
 #custom-left4 {
   color: @color11;
   background: @color8;
   padding-left: 3px;
 }
-/*
-#custom-cpu {
-  background: @color8;
-}
-*/
+
 #cpu {
   background: @color11;
 }
+
 #custom-leftin1 {
   color: @color11;
   margin-bottom: -1px;
 }
 
-/* == Distro Icon == */
-
+/* Distro Icon */
 #custom-left5 {
   color: @color10;
   background: @background;
@@ -181,64 +183,69 @@ tooltip label {
   margin-bottom: -2px;
   padding-left: 3px;
 }
+
 #custom-distro {
   color: @color9;
   background: @color10;
   margin: 0 -1px -2px 0;
   padding: 0 0 0 3px;
   text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+  font-size: 14.6px;
 }
+
 #custom-right2 {
   color: @color10;
   background: @background;
   margin-bottom: -2px;
 }
 
-/* == Time == */
-
+/* Time and Date */
 #custom-rightin1 {
   color: @color11;
   margin-bottom: -1px;
 }
+
 #idle_inhibitor {
   background: @color11;
   margin-right: -2px;
   padding: 0 0 0 7px;
 }
+
 #idle_inhibitor:hover {
   color: @foreground;
   text-shadow: none;
   box-shadow: none;
 }
+
 #clock.time {
   background: @color11;
   padding: 0 3px 0 0;
 }
+
 #custom-right3 {
   color: @color11;
   background: @color8;
 }
 
-/* == Date == */
-
 #clock.date {
   background: @color8;
 }
+
 #clock.date:hover {
   color: @foreground;
   text-shadow: none;
   box-shadow: none;
 }
+
 #custom-right4 {
   color: @color8;
   background: @color1;
 }
 
-/* == Tray == */
-
+/* Tray */
 #tray {
   background: @color1;
-  padding-right : 1px;
+  padding-right: 1px;
 }
 
 #custom-right5 {
@@ -246,80 +253,79 @@ tooltip label {
   background: @background;
 }
 
-/* == Media Info == */
-
+/* Media Controls */
 #custom-media {
   font-weight: normal;
   background-color: @background;
   padding-right: 8px;
   padding-left: 8px;
 }
+
 #custom-media:hover {
   color: @hover-fg;
   text-shadow: none;
   box-shadow: none;
 }
 
-/* == Output Device == */
-
+/* Audio Controls */
 #custom-left6 {
   color: @color14;
   background: @background;
   padding-left: 3px;
 }
+
 #pulseaudio {
   background: @color14;
 }
+
 #pulseaudio:hover {
   color: @hover-fg;
   text-shadow: none;
   box-shadow: none;
 }
 
-/* == Brightness == */
-
+/* Brightness */
 #custom-left7 {
   color: @color13;
   background: @color14;
   padding-left: 2px;
 }
-/*
-#custom-backlight {
-  background: @color15;
-}
-*/
+
 #backlight {
   background: @color13;
 }
 
-/* == Battery == */
-
+/* Battery */
 #custom-left8 {
   color: @color15;
   background: @color13;
   padding-left: 2px;
 }
+
 #battery {
   color: @color5;
   background: @color15;
 }
+
 #battery.warning {
   color: @color10;
 }
+
 #battery.critical {
   color: @color11;
 }
+
 #battery.charging {
   color: @color12;
 }
 
-/* == Power Button == */
-
+/* Power Button */
 #custom-leftin2 {
   color: @color15;
   background: @background;
   margin-bottom: -1px;
 }
+
 #custom-power {
   color: @background;
   background: @color14;
@@ -329,6 +335,7 @@ tooltip label {
   margin: 2px 4px 2px 0;
   padding: 0 6px 0 9px;
 }
+
 #custom-power:hover {
   color: @hover-fg;
   background: @color3;
@@ -336,74 +343,20 @@ tooltip label {
   box-shadow: none;
 }
 
-/* <<--< FONT SIZES >-->> */
-
-/*
-  Font sizes for modules and dividers can be problematic.
-  By problematic, I mean they may not align properly
-  when using only whole numbers.
-
-  If you wish to change them, consider adjusting only
-  the whole numbers and keeping the decimals as they are,
-  unless you know what you're doing.
-*/
-
-/* workspace icon and buttons, window and media title */
+/* Font Sizes */
 * {
   font-size: 10px;
 }
 
-/* left and right arrows */
-#custom-left1,
-#custom-left2,
-#custom-left3,
-#custom-left4,
-#custom-left5,
-#custom-left6,
-#custom-left7,
-#custom-left8,
-#custom-right1,
-#custom-right2,
-#custom-right3,
-#custom-right4,
-#custom-right5 {
-  font-size: 14.68px;
-}
-
-/* left and right inverse */
-#custom-leftin1,
-#custom-leftin2,
-#custom-rightin1 {
-  font-size: 15.5px;
-}
-
-/* distro icon */
+/* Override font sizes for specific elements */
 #custom-distro {
   font-size: 14.6px;
 }
 
-/* distro arrows override */
 #custom-left5,
 #custom-right2 {
   font-size: 15.68px;
 }
 
-/*
-  NOTE: If none of your changes are taking effect,
-  they may be overridden by the font sizes set in
-  `animation.css`.
-
-  If so, copy your new font sizes from this file
-  and paste them into the corresponding
-  `*_expand` keyframes.
-
-  For example, if you change the font size of the
-  distro icon, you should also update it in
-  `distro_expand`.
-
-  - `distro_expand` for the distro icon (line 143)
-  - `power_expand` for the power button (line 158)
-  - `module_expand` for all other modules (line 142)
-*/
-
+/* Import animations */
 @import "animation.css";
