@@ -36,3 +36,4 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.ls = 0
 vim.opt.spell = true
+vim.opt.fillchars = { eob = " "}
