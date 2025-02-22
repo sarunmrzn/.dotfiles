@@ -132,14 +132,14 @@ tooltip label {
   background: @color1;
 }
 
-#custom-left2 {
+#custom-left1 {
   color: @color1;
   background: @background;
   padding-left: 3px;
 }
 
 /* Memory */
-#custom-left3 {
+#custom-left2 {
   color: @color8;
   background: @color1;
   padding-left: 3px;
@@ -160,7 +160,7 @@ tooltip label {
 }
 
 /* CPU */
-#custom-left4 {
+#custom-left3 {
   color: @color11;
   background: @color8;
   padding-left: 3px;
@@ -176,7 +176,7 @@ tooltip label {
 }
 
 /* Distro Icon */
-#custom-left5 {
+#custom-left4 {
   color: @color10;
   background: @background;
   text-shadow: -2px 0 2px rgba(0, 0, 0, 0.6);

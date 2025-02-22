@@ -13,21 +13,21 @@
   ],
 
   "modules-center": [
-    "custom/left2",
     // Temperature
+    "custom/left1",
     "custom/temperature",
 
-    "custom/left3",
     // Memory
+    "custom/left2",
     "memory",
 
-    "custom/left4",
     // CPU
+    "custom/left3",
     "cpu",
     "custom/leftin1",
 
-    "custom/left5",
     // Distro
+    "custom/left4",
     "custom/distro",
     "custom/right2",
 
