@@ -53,9 +53,9 @@
 
     // Date Time
     "custom/left6",
-    "clock",
+    "clock"
 
-    "idle_inhibitor",
+    //"idle_inhibitor",
   ],
 
   // === Modules ===
