@@ -245,7 +245,7 @@ tooltip label {
 /* Media Controls */
 #custom-media {
   font-weight: normal;
-  background-color: @background;
+  background-color: transparent;
   padding-right: 8px;
   padding-left: 8px;
 }
