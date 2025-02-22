@@ -61,7 +61,7 @@ alias gp="git push"
 alias gl="git pull"
 
 alias mux='tmuxinator'
-alias dot='mux start dot'
+alias dot='nvim ~/.dotfiles/'
 alias pb='mux start pb'
 alias cango='mux start cango'
 alias hltr='mux start hltr'

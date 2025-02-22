@@ -1,7 +1,0 @@
-# /home/sarun/.config/tmuxinator/dot.yml
-
-name: dot
-root: ~/.dotfiles/
-
-windows:
-  - editor: nvim
