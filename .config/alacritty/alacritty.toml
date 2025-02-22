@@ -6,7 +6,7 @@ import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
   dynamic_padding = true
   decorations = "None"
   startup_mode = "Maximized"
-  opacity = 0.8
+  opacity = 0.6
   blur = true
   dimensions = { columns = 120, lines = 30 }
   dynamic_title = true
