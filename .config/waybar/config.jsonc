@@ -203,7 +203,7 @@
 
   "battery": {
     "states": {
-      "warning": 20,
+      "warning": 30,
       "critical": 10
     },
 
@@ -289,6 +289,7 @@
 
   "tray": {
     "icon-size": 12,
-    "spacing": 8 
+    "spacing": 8,
+    "show-passive-items": true
   }
 }
