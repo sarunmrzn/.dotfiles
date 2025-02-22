@@ -65,7 +65,7 @@ tooltip label {
 
 /* Common Module Styles */
 #workspaces,
-#custom-cpuinfo,
+#custom-temperature,
 #memory,
 #cpu,
 #idle_inhibitor,
@@ -128,7 +128,7 @@ tooltip label {
   padding-right: 22px;
 }
 
-#custom-cpuinfo {
+#custom-temperature {
   background: @color1;
 }
 
