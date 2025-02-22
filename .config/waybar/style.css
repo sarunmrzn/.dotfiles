@@ -70,14 +70,10 @@ tooltip label {
 #cpu,
 #idle_inhibitor,
 #clock,
-#custom-wifi,
 #bluetooth,
-#custom-update,
-#custom-media,
 #pulseaudio,
 #backlight,
-#battery,
-#custom-power {
+#battery {
   opacity: 1;
   padding: 0 4px;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
@@ -90,8 +86,7 @@ tooltip label {
 #custom-left4,
 #custom-left5,
 #custom-left6,
-#custom-left7,
-#custom-left8 {
+#custom-left7 {
   margin-bottom: 0;
   text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
   font-size: 14.68px;
@@ -101,8 +96,7 @@ tooltip label {
 #custom-right1,
 #custom-right2,
 #custom-right3,
-#custom-right4,
-#custom-right5 {
+#custom-right4 {
   margin-bottom: 0;
   padding-right: 3px;
   text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
@@ -124,18 +118,14 @@ tooltip label {
 }
 
 /* Temperature */
-#custom-paddc {
-  padding-right: 22px;
-}
-
-#custom-temperature {
-  background: @color1;
-}
-
 #custom-left1 {
   color: @color1;
   background: @background;
   padding-left: 3px;
+}
+
+#custom-temperature {
+  background: @color1;
 }
 
 /* Memory */
@@ -214,22 +204,13 @@ tooltip label {
   background: @color8;
 }
 
+/* Audio */
 #pulseaudio {
   background: @color8;
 }
 
 #pulseaudio:hover {
   color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#clock.date {
-  background: @color8;
-}
-
-#clock.date:hover {
-  color: @foreground;
   text-shadow: none;
   box-shadow: none;
 }
@@ -258,11 +239,6 @@ tooltip label {
   color: @color12;
 }
 
-#tray {
-  background: @color1;
-  padding-right: 1px;
-}
-
 #custom-right4 {
   color: @color1;
   background: @background;
@@ -282,15 +258,35 @@ tooltip label {
   box-shadow: none;
 }
 
-/* Audio Controls */
+/* Tray */
+#custom-left7 {
+  color: @color13;
+  padding-left: 2px;
+}
+
+#tray {
+  background: @color13;
+  padding-right: 1px;
+}
+
+/* Date */
 #custom-left5 {
   color: @color14;
-  background: @background;
+  background: @color13;
   padding-left: 3px;
 }
 
+#clock.date {
+  background: @color14;
+}
 
-/* Brightness */
+#clock.date:hover {
+  color: @foreground;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* Time */
 #custom-left6 {
   color: @color11;
   background: @color14;
@@ -312,39 +308,6 @@ tooltip label {
 #clock.time {
   background: @color11;
   padding: 0 3px 0 0;
-}
-
-
-/* Battery */
-#custom-left7 {
-  color: @color15;
-  background: @color13;
-  padding-left: 2px;
-}
-
-
-/* Power Button */
-#custom-leftin2 {
-  color: @color15;
-  background: @background;
-  margin-bottom: -1px;
-}
-
-#custom-power {
-  color: @background;
-  background: @color14;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  margin: 2px 4px 2px 0;
-  padding: 0 6px 0 9px;
-}
-
-#custom-power:hover {
-  color: @hover-fg;
-  background: @color3;
-  text-shadow: none;
-  box-shadow: none;
 }
 
 /* Font Sizes */

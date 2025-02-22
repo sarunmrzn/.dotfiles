@@ -5,11 +5,9 @@
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
 
-  // === Positions ===
-
   "modules-left": [
-    "hyprland/workspaces",  // workspaces
-    "hyprland/window"       // window title
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
 
   "modules-center": [
@@ -36,11 +34,11 @@
     "backlight",
     "custom/right2",
 
-    // Date
+    // Audio
     "pulseaudio",
     "custom/right3",
 
-    // Tray
+    // Battery
     "battery",
     "custom/right4",
   ],
@@ -49,18 +47,18 @@
     // Media
     "custom/media",
 
-    // Audio
+    // Tray
+    "custom/left7",
+    "tray",
+
+    // Date
     "custom/left5",
     "clock#date",
 
-    // Backlight
+    // Time
     "custom/left6",
     "idle_inhibitor",
     "clock#time",
-
-    // Battery
-    "tray",
-    "custom/left7",
   ],
 
   // === Modules ===
@@ -250,10 +248,6 @@
     "format": "",
     "tooltip": false
   },
-  "custom/left8": {
-    "format": "",
-    "tooltip": false
-  },
 
   // == Right Arrows ==
 
@@ -270,10 +264,6 @@
     "tooltip": false
   },
   "custom/right4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right5": {
     "format": "",
     "tooltip": false
   },
