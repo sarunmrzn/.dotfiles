@@ -31,18 +31,17 @@
     "custom/distro",
     "custom/right1",
 
-    // Inhibitor and time
+    // Backlight
     "custom/rightin1",
-    "idle_inhibitor",
-    "clock#time",
+    "backlight",
     "custom/right2",
 
     // Date
-    "clock#date",
+    "pulseaudio",
     "custom/right3",
 
     // Tray
-    "tray",
+    "battery",
     "custom/right4",
   ],
 
@@ -52,15 +51,16 @@
 
     // Audio
     "custom/left5",
-    "pulseaudio",
+    "clock#date",
 
     // Backlight
     "custom/left6",
-    "backlight",
+    "idle_inhibitor",
+    "clock#time",
 
     // Battery
+    "tray",
     "custom/left7",
-    "battery",
   ],
 
   // === Modules ===
@@ -83,8 +83,8 @@
     "format": "{}",
     "tooltip": true,
     "interval": 5,
-    "min-length": 7,
-    "max-length": 7
+    "min-length": 6,
+    "max-length": 6
   },
 
   "memory": {
@@ -97,16 +97,16 @@
     "tooltip": true,
     "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
     "interval": 5,
-    "min-length": 7,
-    "max-length": 7
+    "min-length": 6,
+    "max-length": 6
   },
 
   "cpu": {
     "format": "󰻠 {usage}%",
     "tooltip": false,
     "interval": 5,
-    "min-length": 5,
-    "max-length": 5
+    "min-length": 6,
+    "max-length": 6
   },
 
   "custom/distro": {
@@ -189,8 +189,8 @@
     "on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
     "on-scroll-up": "~/.config/waybar/scripts/volume-control.sh -o i",
     "on-scroll-down": "~/.config/waybar/scripts/volume-control.sh -o d",
-    "min-length": 5,
-    "max-length": 5
+    "min-length": 6,
+    "max-length": 6
   },
 
   "backlight": {
@@ -199,8 +199,8 @@
     "tooltip": false,
     "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
     "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
-    "min-length": 5,
-    "max-length": 5
+    "min-length": 6,
+    "max-length": 6
   },
 
   "battery": {
@@ -216,8 +216,8 @@
     "tooltip-format": "Discharging: {time}",
     "tooltip-format-charging": "Charging: {time}",
     "interval": 1,
-    "min-length": 5,
-    "max-length": 5
+    "min-length": 6,
+    "max-length": 6
   },
 
   // == Left Arrows ==

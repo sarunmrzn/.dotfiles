@@ -199,32 +199,29 @@ tooltip label {
   margin-bottom: -2px;
 }
 
-/* Time and Date */
+/* Backlight */
 #custom-rightin1 {
   color: @color11;
   margin-bottom: -1px;
 }
 
-#idle_inhibitor {
+#backlight {
   background: @color11;
-  margin-right: -2px;
-  padding: 0 0 0 7px;
-}
-
-#idle_inhibitor:hover {
-  color: @foreground;
-  text-shadow: none;
-  box-shadow: none;
-}
-
-#clock.time {
-  background: @color11;
-  padding: 0 3px 0 0;
 }
 
 #custom-right2 {
   color: @color11;
   background: @color8;
+}
+
+#pulseaudio {
+  background: @color8;
+}
+
+#pulseaudio:hover {
+  color: @hover-fg;
+  text-shadow: none;
+  box-shadow: none;
 }
 
 #clock.date {
@@ -242,7 +239,25 @@ tooltip label {
   background: @color1;
 }
 
-/* Tray */
+/* Battery */
+
+#battery {
+  color: @color5;
+  background: @color1;
+}
+
+#battery.warning {
+  color: @color10;
+}
+
+#battery.critical {
+  color: @color11;
+}
+
+#battery.charging {
+  color: @color12;
+}
+
 #tray {
   background: @color1;
   padding-right: 1px;
@@ -274,26 +289,31 @@ tooltip label {
   padding-left: 3px;
 }
 
-#pulseaudio {
-  background: @color14;
-}
-
-#pulseaudio:hover {
-  color: @hover-fg;
-  text-shadow: none;
-  box-shadow: none;
-}
 
 /* Brightness */
 #custom-left6 {
-  color: @color13;
+  color: @color11;
   background: @color14;
   padding-left: 2px;
 }
 
-#backlight {
-  background: @color13;
+#idle_inhibitor {
+  background: @color11;
+  margin-right: -2px;
+  padding: 0 0 0 7px;
 }
+
+#idle_inhibitor:hover {
+  color: @foreground;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#clock.time {
+  background: @color11;
+  padding: 0 3px 0 0;
+}
+
 
 /* Battery */
 #custom-left7 {
@@ -302,22 +322,6 @@ tooltip label {
   padding-left: 2px;
 }
 
-#battery {
-  color: @color5;
-  background: @color15;
-}
-
-#battery.warning {
-  color: @color10;
-}
-
-#battery.critical {
-  color: @color11;
-}
-
-#battery.charging {
-  color: @color12;
-}
 
 /* Power Button */
 #custom-leftin2 {
