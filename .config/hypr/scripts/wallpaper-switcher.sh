@@ -2,7 +2,7 @@
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
-INTERVAL=10
+INTERVAL=900
 
 while true; do
     WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) | shuf -n 1)
