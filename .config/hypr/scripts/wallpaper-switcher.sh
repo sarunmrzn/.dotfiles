@@ -1,14 +1,12 @@
-#!/bin/bash
-hyprctl dispatch exec hyprpaper
+# #!/bin/bash
 
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 
-INTERVAL=300
-
 while true; do
-    sleep 1
-    WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) | shuf -n 1)
-    hyprctl hyprpaper reload ,"$WALLPAPER"
+    CURRENT_WALL=$(hyprctl hyprpaper listloaded)
+    WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+    hyprctl hyprpaper preload "$WALLPAPER"
+    hyprctl hyprpaper wallpaper "*, $WALLPAPER"
     wal -i "$WALLPAPER"
-    sleep $INTERVAL
+    sleep 900
 done
