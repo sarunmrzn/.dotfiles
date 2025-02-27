@@ -9,5 +9,5 @@ while true; do
     hyprctl hyprpaper preload "$WALLPAPER"
     hyprctl hyprpaper wallpaper "*, $WALLPAPER"
     wal -i "$WALLPAPER"
-    sleep 900
+    sleep 1800
 done
