@@ -16,7 +16,7 @@ import = [ "~/.cache/wal/colors-alacritty.toml" ]
   normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
   bold   = { family = "JetBrainsMono Nerd Font", style = "Bold" }
   italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
-  size = 12
+  size = 10
   offset = { x = 0, y = 1 }
   glyph_offset = { x = 0, y = 0 }
   builtin_box_drawing = true
