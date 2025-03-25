@@ -11,8 +11,10 @@
 !.gitconfig
 !.profile
 !.zshenv
+!install.sh
 
 !/.config/
+!/pacman/*
 
 /.config/*
 
