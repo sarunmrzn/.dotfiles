@@ -14,10 +14,15 @@
 !install.sh
 !install.log
 !README.md
+!CONTRIBUTING.md
+!keybinds.md
+!Makefile
+!LICENSE
+
+!/pacman/*
+!tests/*
 
 !/.config/
-!/pacman/*
-
 /.config/*
 
 !/.config/nvim/
