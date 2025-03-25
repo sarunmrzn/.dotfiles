@@ -12,6 +12,8 @@
 !.profile
 !.zshenv
 !install.sh
+!install.log
+!README.md
 
 !/.config/
 !/pacman/*
