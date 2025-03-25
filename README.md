@@ -13,6 +13,7 @@ A comprehensive dotfiles setup for Arch Linux with Hyprland, featuring a robust 
 - 🔋 **Power Management**: Powertop and auto-cpufreq
 - 📱 **Bluetooth Support**: Enabled by default
 - 📁 **Directory Structure**: Standard XDG directories + Code directory
+- 🧪 **Testing Framework**: Comprehensive test suite for installation and configuration
 
 ## Prerequisites
 
@@ -82,6 +83,72 @@ sudo ./install.sh --rollback
 cat ~/.dotfiles/install.log
 ```
 
+## Testing Framework
+
+The dotfiles include a comprehensive testing framework to ensure proper installation and configuration.
+
+### Running Tests
+
+1. **Run all tests**:
+```bash
+make test
+```
+
+2. **Run specific test phases**:
+```bash
+make test-setup  # Setup test environment
+make test-run    # Run tests
+make test-cleanup  # Cleanup
+```
+
+3. **Run linting**:
+```bash
+make lint
+```
+
+### What Tests Cover
+
+The test suite verifies:
+- Basic command installation (git, zsh, stow, curl, yay)
+- Dotfiles structure and organization
+- Configuration files existence and content
+- Development environment setup (Node.js, Rust, Docker)
+- System services status (bluetooth, docker, powertop, auto-cpufreq)
+- User group memberships
+- SSH configuration
+- Git configuration
+
+### Test Output Example
+
+```
+Starting dotfiles installation tests...
+=====================================
+
+Testing basic commands...
+✓ Command 'git' exists
+✓ Command 'zsh' exists
+✓ Command 'stow' exists
+✓ Command 'curl' exists
+✓ Command 'yay' exists
+
+[... more test results ...]
+
+Test Summary:
+=====================================
+Passed: 27
+Failed: 2
+=====================================
+```
+
+### Test Environment
+
+The testing framework:
+- Creates an isolated test environment
+- Sets up a test user
+- Creates necessary test files
+- Provides cleanup functionality
+- Runs tests in a controlled environment
+
 ## Directory Structure
 
 ```
@@ -91,8 +158,12 @@ cat ~/.dotfiles/install.log
 │   ├── packages.txt  # Official packages
 │   └── aur-packages.txt  # AUR packages
 ├── backups/          # Timestamped backups
-├── install.sh        # Installation script
-└── install.log       # Installation logs
+├── tests/           # Test suite
+│   ├── test_install.sh
+│   └── setup_test_env.sh
+├── install.sh       # Installation script
+├── install.log      # Installation logs
+└── Makefile        # Build and test automation
 ```
 
 ## Development Environment
@@ -154,6 +225,12 @@ stow -R .
 3. **If services fail to start**:
    - Check system logs: `journalctl -xe`
    - Verify service status: `systemctl status <service>`
+
+4. **If tests fail**:
+   - Check the test output for specific failures
+   - Verify the test environment setup
+   - Check if all prerequisites are met
+   - Review the installation logs
 
 ## Contributing
 
