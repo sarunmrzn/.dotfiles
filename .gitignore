@@ -11,30 +11,16 @@
 !.gitconfig
 !.profile
 !.zshenv
-!install.sh
-!install.log
-!README.md
-!CONTRIBUTING.md
-!keybinds.md
-!Makefile
-!LICENSE
-
-!/pacman/*
-!tests/*
 
 !/.config/
 /.config/*
 
 !/.config/nvim/
-!/.config/alacritty/
-!/.config/gtk-3.0/
 !/.config/hypr/
-!/.config/sway/
 !/.config/swaync/
 !/.config/waybar/
 !/.config/rofi/
-!/.config/tmuxinator/
-!/.config/kitty/
+!/.config/ghostty/
 !/.config/mimeapps.list
 
 # Backup files

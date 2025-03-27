@@ -1,0 +1,10 @@
+font-family = JetBrainsMono Nerd Font Mono
+background-opacity = 0.9
+background-blur = true
+
+keybind = ctrl+shift+|=new_split:right
+keybind = ctrl+shift+-=new_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+l=goto_split:right
