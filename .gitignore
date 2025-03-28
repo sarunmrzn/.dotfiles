@@ -17,6 +17,7 @@
 
 !/.config/nvim/
 !/.config/hypr/
+!/.config/sway/
 !/.config/swaync/
 !/.config/waybar/
 !/.config/rofi/
