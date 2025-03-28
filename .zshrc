@@ -47,12 +47,4 @@ alias lta='exa -lT'        # Tree view in long format
 alias lg='exa --git'       # Show git status
 alias lga='exa -la --git'  # Show all files with git status
 
-
 alias dot='nvim ~/.dotfiles'  # Show all files with git status
-
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator 
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export ANDROID_HOME=/opt/android-sdk
-export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
