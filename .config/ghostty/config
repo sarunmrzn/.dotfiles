@@ -17,3 +17,28 @@ keybind = alt+\=new_split:down
 # Other settings
 click-repeat-interval = 500
 auto-update-channel = tip
+
+# Colors from pywal theme
+background = #000000
+foreground = #bfbfbf
+cursor-color = #bfbfbf
+selection-background = #bfbfbf
+selection-foreground = #000000
+
+# Color palette
+palette = 0=#000000
+palette = 1=#EFCF41
+palette = 2=#56328A
+palette = 3=#693C8B
+palette = 4=#754293
+palette = 5=#76698F
+palette = 6=#B6ABAD
+palette = 7=#bfbfbf
+palette = 8=#615050
+palette = 9=#EFCF41
+palette = 10=#56328A
+palette = 11=#693C8B
+palette = 12=#754293
+palette = 13=#76698F
+palette = 14=#B6ABAD
+palette = 15=#bfbfbf
