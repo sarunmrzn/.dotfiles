@@ -18,6 +18,13 @@ output * bg $wallpaper fill
 exec gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 exec gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
+# Window colors
+client.focused          $color4 $color4 $foreground $color4 $color4
+client.focused_inactive $color1 $color1 $foreground $color1 $color1
+client.unfocused        $color0 $color0 $foreground $color0 $color0
+client.urgent           $color9 $color9 $foreground $color9 $color9
+client.placeholder      $color0 $color0 $foreground $color0 $color0
+client.background       $background
 
 # System Tray and Utilities
 exec nm-applet & blueman-applet & swaync & waybar
