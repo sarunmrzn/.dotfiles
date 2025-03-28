@@ -4,13 +4,7 @@ mouse-hide-while-typing = true
 scrollback-limit = 1000000
 background-opacity = 0.9
 
-keybind = ctrl+c=new_tab
-
-keybind = shift+h=goto_split:left
-keybind = shift+l=goto_split:right
-keybind = shift+j=goto_split:down
-keybind = shift+k=goto_split:up
-
+keybind = ctrl+space>c=new_tab
 keybind = ctrl+space>h=new_split:left
 keybind = ctrl+space>j=new_split:down
 keybind = ctrl+space>k=new_split:up
@@ -20,31 +14,36 @@ keybind = ctrl+space>f=toggle_split_zoom
 keybind = ctrl+space>n=next_tab
 keybind = ctrl+space>p=previous_tab
 
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+
 # Other settings
 click-repeat-interval = 500
 auto-update-channel = tip
 
 # Colors from pywal theme
-background = #16110e
-foreground = #c4c3c2
-cursor-color = #c4c3c2
-selection-background = #c4c3c2
-selection-foreground = #16110e
+background = #080D15
+foreground = #c1c2c4
+cursor-color = #c1c2c4
+selection-background = #c1c2c4
+selection-foreground = #080D15
 
 # Color palette
-palette = 0=#16110e
-palette = 1=#7F817A
-palette = 2=#AF8F70
-palette = 3=#727C84
-palette = 4=#789097
-palette = 5=#8E989E
-palette = 6=#BFBDB6
-palette = 7=#c4c3c2
-palette = 8=#6e625a
-palette = 9=#7F817A
-palette = 10=#AF8F70
-palette = 11=#727C84
-palette = 12=#789097
-palette = 13=#8E989E
-palette = 14=#BFBDB6
-palette = 15=#c4c3c2
+palette = 0=#080D15
+palette = 1=#63535A
+palette = 2=#865B3C
+palette = 3=#946C69
+palette = 4=#A17985
+palette = 5=#7C8381
+palette = 6=#AD9296
+palette = 7=#c1c2c4
+palette = 8=#585f6b
+palette = 9=#63535A
+palette = 10=#865B3C
+palette = 11=#946C69
+palette = 12=#A17985
+palette = 13=#7C8381
+palette = 14=#AD9296
+palette = 15=#c1c2c4
