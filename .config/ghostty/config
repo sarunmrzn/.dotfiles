@@ -19,26 +19,26 @@ click-repeat-interval = 500
 auto-update-channel = tip
 
 # Colors from pywal theme
-background = #000000
-foreground = #bfbfbf
-cursor-color = #bfbfbf
-selection-background = #bfbfbf
-selection-foreground = #000000
+background = #0a0a07
+foreground = #c1c1c1
+cursor-color = #c1c1c1
+selection-background = #c1c1c1
+selection-foreground = #0a0a07
 
 # Color palette
-palette = 0=#000000
-palette = 1=#EFCF41
-palette = 2=#56328A
-palette = 3=#693C8B
-palette = 4=#754293
-palette = 5=#76698F
-palette = 6=#B6ABAD
-palette = 7=#bfbfbf
-palette = 8=#615050
-palette = 9=#EFCF41
-palette = 10=#56328A
-palette = 11=#693C8B
-palette = 12=#754293
-palette = 13=#76698F
-palette = 14=#B6ABAD
-palette = 15=#bfbfbf
+palette = 0=#0a0a07
+palette = 1=#797B7E
+palette = 2=#659924
+palette = 3=#719D50
+palette = 4=#97A35E
+palette = 5=#A8C540
+palette = 6=#A4D35F
+palette = 7=#c1c1c1
+palette = 8=#676754
+palette = 9=#797B7E
+palette = 10=#659924
+palette = 11=#719D50
+palette = 12=#97A35E
+palette = 13=#A8C540
+palette = 14=#A4D35F
+palette = 15=#c1c1c1
