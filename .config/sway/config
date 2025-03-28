@@ -5,15 +5,19 @@ set $down j
 set $up k
 set $right l
 
+# Load pywal colors
+include ~/.cache/wal/colors-sway
+
 # Applications
 set $term ghostty
 set $menu rofi -show drun
 set $browser brave
 
 # Theme and Appearance
-output * bg ~/Pictures/Wallpapers/568500.jpg fill
+output * bg $wallpaper fill
 exec gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 exec gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+
 
 # System Tray and Utilities
 exec nm-applet & blueman-applet & swaync & waybar
@@ -26,9 +30,9 @@ output eDP-1 disable
 
 # Idle Configuration
 exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
+    timeout 300 'swaylock -f -c $background' \
     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock -f -c 000000'
+    before-sleep 'swaylock -f -c $background'
 
 # Input Configuration
 input "1267:12632:ELAN050A:01_04F3:3158_Touchpad" {
