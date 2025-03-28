@@ -2,7 +2,7 @@ font-family = JetBrainsMono Nerd Font Mono
 font-family-bold = JetBrainsMono Nerd Font Mono
 font-family-italic = JetBrainsMono Nerd Font Mono
 font-family-bold-italic = JetBrainsMono Nerd Font Mono
-background-opacity = 0.9
+background-opacity = 0.8
 
 keybind = alt+c=new_tab
 keybind = alt+n=next_tab
@@ -19,26 +19,26 @@ click-repeat-interval = 500
 auto-update-channel = tip
 
 # Colors from pywal theme
-background = #0a0a07
-foreground = #c1c1c1
-cursor-color = #c1c1c1
-selection-background = #c1c1c1
-selection-foreground = #0a0a07
+background = #0F1014
+foreground = #c3c3c4
+cursor-color = #c3c3c4
+selection-background = #c3c3c4
+selection-foreground = #0F1014
 
 # Color palette
-palette = 0=#0a0a07
-palette = 1=#797B7E
-palette = 2=#659924
-palette = 3=#719D50
-palette = 4=#97A35E
-palette = 5=#A8C540
-palette = 6=#A4D35F
-palette = 7=#c1c1c1
-palette = 8=#676754
-palette = 9=#797B7E
-palette = 10=#659924
-palette = 11=#719D50
-palette = 12=#97A35E
-palette = 13=#A8C540
-palette = 14=#A4D35F
-palette = 15=#c1c1c1
+palette = 0=#0F1014
+palette = 1=#4D4A52
+palette = 2=#605F6A
+palette = 3=#916C63
+palette = 4=#948979
+palette = 5=#65738A
+palette = 6=#77879D
+palette = 7=#c3c3c4
+palette = 8=#5a5a6e
+palette = 9=#4D4A52
+palette = 10=#605F6A
+palette = 11=#916C63
+palette = 12=#948979
+palette = 13=#65738A
+palette = 14=#77879D
+palette = 15=#c3c3c4
