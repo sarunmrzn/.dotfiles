@@ -25,7 +25,7 @@ setopt PUSHD_SILENT
 
 export EDITOR='nvim'
 export VISUAL='nvim'
-export TERMINAL='kitty'
+export TERMINAL='ghostty'
 export BROWSER='brave'
 
 export XDG_DATA_DIRS=/usr/share:/usr/local/share:$XDG_DATA_DIRS
