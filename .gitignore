@@ -11,6 +11,7 @@
 !.gitconfig
 !.profile
 !.zshenv
+!.tmux.conf
 
 !/.config/
 /.config/*
@@ -22,3 +23,4 @@
 !/.config/waybar/
 !/.config/rofi/
 !/.config/ghostty/
+!/.config/alacritty/
