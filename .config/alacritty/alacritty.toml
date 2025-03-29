@@ -1,86 +1,17 @@
-[env]
-TERM = "xterm-256color"
-
 [window]
-# Window padding (in pixels)
-padding = { x = 8, y = 8 }
-# Window opacity (0.0 to 1.0)
-opacity = 1.0
+padding = { x = 0, y = 0 }
+opacity = 0.9
 
 [font]
-# Normal font
 normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
-# Bold font
 bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
-# Font size in points
-size = 12.0
-# Offset is the extra space around each character
-offset = { x = 0, y = 0 }
-# Glyph offset determines the locations of the glyphs within their cells with the default being at the bottom
-glyph_offset = { x = 0, y = 0 }
-
-[colors]
-# Import pywal colors
-import = ["~/.cache/wal/colors-alacritty.yml"]
-
-[cursor]
-# Cursor style
-style = { shape = "Block", blinking = "On" }
-# Blink interval of the cursor, in milliseconds
-blink_interval = 750
-# If this is `true`, the cursor will be rendered as a hollow box when the window is not focused
-unfocused_hollow = true
+size = 14.0
 
 [selection]
-# When true, selected text will be copied to the primary clipboard
 save_to_clipboard = true
 
-[scrolling]
-# Number of lines the viewport will move for every line scrolled when smooth scrolling is enabled
-multiplier = 3
-# Faux scrolling multiplier
-faux_multiplier = 3
-# Enable smooth scrolling
-smooth = true
-
-[performance]
-# Maximum number of lines in the scrollback buffer
-scrollback_lines = 10000
-# GPU acceleration
-gpu = true
-
-[terminal]
-# OSC 52 clipboard support
-osc52 = true
-
-[shell]
-# Program that should be executed to spawn the shell
-program = "/usr/bin/zsh"
-# Value used for the $TERM environment variable
-term = "xterm-256color"
-
-[debug]
-# Display the time it takes to redraw each frame
-render_timer = false
-# Keep the log file after quitting Alacritty
-persistent_logging = false
-# Log level
-log_level = "Warn"
-# Print all received escape sequences as plain text
-print_events = false
-# Record all characters and escape sequences as plain text
-record_timestamp = false
-
-[encoding]
-# The encoding used when reading input
-charset = "UTF-8"
-
 [mouse]
-# Make the cursor blink when the mouse is hidden
 hide_when_typing = true
 
-[url]
-# Program used to open URLs
-launcher = { program = "xdg-open", args = [] }
-# URL modifiers
-modifiers = "Control|Shift"
+[general]
+import = ["~/.cache/wal/colors-alacritty.toml"]
