@@ -24,3 +24,10 @@
 !/.config/rofi/
 !/.config/ghostty/
 !/.config/alacritty/
+!/.config/gtk-3.0/
+!/.config/gtk-4.0/
+!/.config/lazygit/
+
+!/.config/mimeapps.list
+!/.config/user-dirs.dirs
+!/.config/user-dirs.locale
