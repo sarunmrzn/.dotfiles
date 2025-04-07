@@ -48,4 +48,6 @@ alias lg='exa --git'       # Show git status
 alias lga='exa -la --git'  # Show all files with git status
 
 alias dot='nvim ~/.dotfiles'  # Show all files with git status
+alias mux='tmuxinator'
+alias pb='mux start pb'
 alias notes='nvim ~/Documents/notes/'  # Show all files with git status
