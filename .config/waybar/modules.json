@@ -3,6 +3,8 @@
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{name}",
+        "show-special": true,
+        "on-click": "",
         "format-icons": {
             "urgent": "",
             "active": "",
