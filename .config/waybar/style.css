@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.8);
-    color: rgba(255, 255, 255, 0.8);
+    background: #282828; /* Gruvbox dark background */
+    color: #ebdbb2;       /* Gruvbox light foreground */
 }
 
 #clock,
@@ -19,15 +19,18 @@ window#waybar {
 #backlight,
 #idle_inhibitor {
     padding: 0 8px;
+    color: #ebdbb2; /* Gruvbox light text */
 }
 
 #workspaces button {
-  background: transparent;
-  font-weight: 900;
+    background: transparent;
+    font-weight: 900;
+    color: #928374; /* Gruvbox gray */
 }
 
 #workspaces button.active {
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(0, 0, 0, 0.8);
+    color: #fabd2f;       /* Gruvbox yellow */
+    background: #3c3836;  /* Gruvbox dark gray */
     border-radius: 0;
 }
+

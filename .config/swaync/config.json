@@ -54,14 +54,14 @@
           "image-radius": 12
       },
       "volume": {
-          "label": "󰕾",
+          "label": "󰕾 ",
           "show-percentage": true,
           "max-volume": 100,
           "min-volume": 0,
           "use-pamixer": true
       },
       "backlight": {
-          "label": "󰃟",
+          "label": "󰃟 ",
           "show-percentage": true,
           "min-brightness": 0,
           "max-brightness": 100,

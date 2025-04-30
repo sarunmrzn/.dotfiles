@@ -25,7 +25,7 @@ setopt PUSHD_SILENT
 
 export EDITOR='nvim'
 export VISUAL='nvim'
-export TERMINAL='ghostty'
+export TERMINAL='alacritty'
 export BROWSER='brave'
 
 export XDG_DATA_DIRS=/usr/share:/usr/local/share:$XDG_DATA_DIRS
@@ -35,9 +35,6 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(zoxide init zsh)"
 alias cd='z'
-
-# Load pywal colors
-[ -f "$HOME/.cache/wal/colors.sh" ] && source "$HOME/.cache/wal/colors.sh"
 
 # Aliases for exa
 alias l='exa -l'          # List files in long format

@@ -18,12 +18,12 @@ exec gsettings set org.gnome.desktop.interface gtk-theme "gruvbox-dark-gtk"
 exec gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Window colors (Gruvbox Dark)
-client.focused          #458588 #458588 #ebdbb2 #458588 #458588
-client.focused_inactive #504945 #504945 #ebdbb2 #504945 #504945
-client.unfocused        #3c3836 #3c3836 #ebdbb2 #3c3836 #3c3836
-client.urgent           #cc241d #cc241d #ebdbb2 #cc241d #cc241d
-client.placeholder      #3c3836 #3c3836 #ebdbb2 #3c3836 #3c3836
-client.background       #1d2021
+client.focused          #2a2e35 #2a2e35 #a3b8d4 #2a2e35 #2a2e35
+client.focused_inactive #2a2e35 #2a2e35 #a3b8d4 #2a2e35 #2a2e35
+client.unfocused        #1d2021 #1d2021 #a3b8d4 #1d2021 #1d2021
+client.urgent           #7f5b63 #7f5b63 #a3b8d4 #7f5b63 #7f5b63
+client.placeholder      #1d2021 #1d2021 #a3b8d4 #1d2021 #1d2021
+client.background       #101213
 
 # System Tray and Utilities
 exec nm-applet & blueman-applet & swaync & waybar
@@ -76,6 +76,7 @@ bindsym $mod+c exec clipman pick -t rofi
 bindsym $mod+n exec swaync-client -t -sw
 bindsym $mod+p exec wdisplays
 bindsym $mod+x exec swaylock
+bindsym $mod+period exec rofimoji --action copy --clipboarder wl-copy
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'

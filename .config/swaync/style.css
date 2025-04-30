@@ -1,36 +1,46 @@
+/* Gruvbox color palette */
+:root {
+  --bg: #282828;
+  --bg-soft: #3c3836;
+  --fg: #ebdbb2;
+  --accent: #fe8019;
+  --muted: #a89984;
+  --highlight: #fabd2f;
+  --dim: #504945;
+}
+
 /* Main background */
 .notification-row {
   outline: none;
   margin: 10px;
   padding: 8px;
+  background: var(--bg);
 }
 
 .notification-row:focus,
 .notification-row:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--dim);
 }
 
 .notification {
   margin: 6px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   padding: 0;
-  border-radius: 12px;
-  background: rgba(26, 27, 38, 0.9);
+  background: var(--bg-soft);
 }
 
 /* Notifications */
 .notification-content {
   background: transparent;
   padding: 10px;
-  color: #c0caf5;
+  color: var(--fg);
 }
 
 .close-button {
-  background: #1a1b26;
-  color: #c0caf5;
+  background: var(--bg);
+  color: var(--fg);
   text-shadow: none;
   padding: 0;
-  border-radius: 100%;
   margin-top: 10px;
   margin-right: 10px;
   box-shadow: none;
@@ -40,17 +50,14 @@
 }
 
 .close-button:hover {
-  box-shadow: none;
-  background: #1a1b26;
+  background: var(--dim);
   transition: all 0.15s ease-in-out;
-  border: none;
 }
 
 /* Control Center */
 .control-center {
-  background: rgba(26, 27, 38, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  background: var(--bg-soft);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   margin: 10px;
   padding: 10px;
 }
@@ -61,38 +68,38 @@
 
 .control-center-list-placeholder {
   opacity: 0.5;
+  color: var(--muted);
 }
 
 /* Widget styling */
 .widget-title {
-  color: #c0caf5;
-  font-size: 1.25rem;
+  color: var(--fg);
+  font-size: 2rem;
   margin: 10px;
 }
 
 .widget-dnd {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--dim);
   padding: 8px;
-  border-radius: 12px;
   margin: 8px;
-  font-size: 1rem;
+  font-size: 2rem;
+  color: var(--fg);
 }
 
 .widget-dnd > switch {
-  border-radius: 12px;
-  background: #1a1b26;
+  background: var(--bg);
 }
 
 .widget-dnd > switch:checked {
-  background: #7aa2f7;
+  background: var(--accent);
 }
 
 /* MPRIS widget */
 .widget-mpris {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--dim);
   padding: 8px;
-  border-radius: 12px;
   margin: 8px;
+  color: var(--fg);
 }
 
 .widget-mpris-player {
@@ -102,23 +109,24 @@
 
 .widget-mpris-title {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .widget-mpris-subtitle {
-  font-size: 0.85rem;
+  font-size: 1.25rem;
+  color: var(--muted);
 }
 
 /* Volume and Brightness widgets */
 .widget-volume,
 .widget-backlight {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--dim);
   padding: 8px;
-  border-radius: 12px;
   margin: 8px;
+  color: var(--fg);
 }
 
-/* Volume and Brightness widgets - Add these specific styles */
+/* Volume and Brightness widgets - styles */
 .widget-volume scale,
 .widget-backlight scale {
   min-width: 180px;
@@ -128,13 +136,12 @@
 
 .widget-volume scale trough,
 .widget-backlight scale trough {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  background-color: var(--bg);
   margin: 0;
 }
 
 .widget-volume scale highlight,
 .widget-backlight scale highlight {
-  background-color: #7aa2f7;
-  border-radius: 12px;
+  background-color: var(--highlight);
 }
+
