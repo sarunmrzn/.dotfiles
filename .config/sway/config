@@ -14,8 +14,6 @@ set $wallpaper ~/Pictures/Wallpapers/elegant.png
 
 # Theme and Appearance
 output * bg $wallpaper fill
-exec gsettings set org.gnome.desktop.interface gtk-theme "gruvbox-dark-gtk"
-exec gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
 # Window colors (Gruvbox Dark)
 client.focused          #2a2e35 #2a2e35 #a3b8d4 #2a2e35 #2a2e35
@@ -29,11 +27,13 @@ client.background       #101213
 exec nm-applet & blueman-applet & swaync & waybar
 exec wl-paste -t text --watch clipman store --no-persist
 exec wl-paste -t image --watch clipman store --no-persist
+exec wlsunset -t 3000 -T 6500 -l 27.7172 -L 85.3240
 
 # Display Configuration
 # output DP-1 pos 0 0 res 1920x1080@144.013Hz
 output DP-1 pos 0 0 res 1920x1080@60Hz
-output eDP-1 pos 1920 0 res 1920x1080
+output eDP-1 disable
+# output eDP-1 pos 1920 0 res 1920x1080
 
 # Idle Configuration
 exec swayidle -w \
