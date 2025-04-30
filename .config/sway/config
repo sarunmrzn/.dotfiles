@@ -5,26 +5,25 @@ set $down j
 set $up k
 set $right l
 
-# Load pywal colors
-include ~/.cache/wal/colors-sway
-
 # Applications
-set $term ghostty
+set $term alacritty
 set $menu rofi -show drun
 set $browser brave
 
+set $wallpaper ~/Pictures/Wallpapers/elegant.png
+
 # Theme and Appearance
 output * bg $wallpaper fill
-exec gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
+exec gsettings set org.gnome.desktop.interface gtk-theme "gruvbox-dark-gtk"
 exec gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 
-# Window colors
-client.focused          $color4 $color4 $foreground $color4 $color4
-client.focused_inactive $color1 $color1 $foreground $color1 $color1
-client.unfocused        $color0 $color0 $foreground $color0 $color0
-client.urgent           $color9 $color9 $foreground $color9 $color9
-client.placeholder      $color0 $color0 $foreground $color0 $color0
-client.background       $background
+# Window colors (Gruvbox Dark)
+client.focused          #458588 #458588 #ebdbb2 #458588 #458588
+client.focused_inactive #504945 #504945 #ebdbb2 #504945 #504945
+client.unfocused        #3c3836 #3c3836 #ebdbb2 #3c3836 #3c3836
+client.urgent           #cc241d #cc241d #ebdbb2 #cc241d #cc241d
+client.placeholder      #3c3836 #3c3836 #ebdbb2 #3c3836 #3c3836
+client.background       #1d2021
 
 # System Tray and Utilities
 exec nm-applet & blueman-applet & swaync & waybar
@@ -32,8 +31,8 @@ exec wl-paste -t text --watch clipman store --no-persist
 exec wl-paste -t image --watch clipman store --no-persist
 
 # Display Configuration
-output DP-1 pos 0 0 res 1920x1080@144.013Hz scale 1
-output eDP-1 disable
+# output DP-1 pos 0 0 res 1920x1080@144.013Hz scale 1
+# output eDP-1 disable
 
 # Idle Configuration
 exec swayidle -w \

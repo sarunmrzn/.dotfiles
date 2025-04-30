@@ -3,11 +3,9 @@
     font-size: 14px;
 }
 
-@import "/home/sarun/.cache/wal/colors-waybar.css";
-
 window#waybar {
     background: rgba(0, 0, 0, 0.8);
-    color: @foreground;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 #clock,
@@ -29,7 +27,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @background; 
-    background: @color1;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 0;
 }
