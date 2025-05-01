@@ -86,8 +86,8 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 ## Screenshot and Recording
 bindsym Print exec grim - | wl-copy && grim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png 
 bindsym $mod+Shift+s exec bash -c 'GEOM=$(slurp) && grim -g "$GEOM" - | wl-copy && grim -g "$GEOM" ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png'
-bindsym $mod+Shift+v exec wf-recorder -g "$(slurp)" -f ~/Videos/recording-$(date +%Y%m%d-%H%M%S).mp4
-bindsym $mod+Ctrl+v exec killall -s SIGINT wf-recorder
+# bindsym $mod+Shift+v exec wf-recorder -g "$(slurp)" -f ~/Videos/recording-$(date +%Y%m%d-%H%M%S).mp4
+# bindsym $mod+Ctrl+v exec killall -s SIGINT wf-recorder
 
 ## Window Management
 floating_modifier $mod normal

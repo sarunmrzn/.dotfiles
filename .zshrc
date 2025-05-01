@@ -44,7 +44,8 @@ alias lta='exa -lT'        # Tree view in long format
 alias lg='exa --git'       # Show git status
 alias lga='exa -la --git'  # Show all files with git status
 
-alias dot='nvim ~/.dotfiles'  # Show all files with git status
+alias dot='nvim ~/.dotfiles'
 alias mux='tmuxinator'
 alias pb='mux start pb'
-alias notes='nvim ~/Documents/notes/'  # Show all files with git status
+alias home='mux start home'
+alias notes='nvim ~/Documents/notes/'
