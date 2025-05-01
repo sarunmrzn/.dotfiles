@@ -4,7 +4,7 @@ set -e
 
 # ---------- Pacman Packages ----------
 pacman_packages=(
-    7zip adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts alacritty discord
+    7zip adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts alacritty discord tldr
     auto-cpufreq blueman bluez bpytop brightnessctl btrfs-progs catfish chafa clipman font-manager
     dbeaver docker docker-compose eza fastfetch fd ffmpeg ffmpegthumbnailer file-roller gnome-disk-utility
     fzf git grim gruvbox-dark-gtk gruvbox-dark-icons-gtk gst-plugin-pipewire gvfs imagemagick

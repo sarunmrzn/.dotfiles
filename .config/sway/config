@@ -34,7 +34,7 @@ exec wlsunset -t 3000 -T 6500 -l 27.7172 -L 85.3240
 # output DP-1 pos 0 0 res 1920x1080@60Hz
 # output eDP-1 disable
 # output eDP-1 pos 1920 0 res 1920x1080
-output eDP-1
+# output eDP-1
 
 # Idle Configuration
 exec swayidle -w \
