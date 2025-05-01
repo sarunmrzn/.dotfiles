@@ -27,6 +27,8 @@
 !/.config/gtk-3.0/
 !/.config/gtk-4.0/
 !/.config/lazygit/
+!/.config/bpytop/
+!/.config/xsettingsd/
 
 !/.config/mimeapps.list
 !/.config/user-dirs.dirs
