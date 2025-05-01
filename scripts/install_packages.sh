@@ -12,9 +12,9 @@ pacman_packages=(
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nwg-look otf-font-awesome pavucontrol poppler
     poppler-glib posting ripgrep rofi-wayland rofimoji slurp smartmontools sof-firmware stow
     swaync thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman qt5-wayland
-    tmux tmuxinator ttf-font-awesome ttf-jetbrains-mono-nerd tumbler vim waybar
-    wdisplays wf-recorder wl-clipboard wlsunset cava cmatrix pipes.sh gimp vlc mpv
-    wtype xdg-desktop-portal xdg-desktop-portal-wlr xdg-user-dirs xdg-utils
+    tmux tmuxinator ttf-font-awesome ttf-jetbrains-mono-nerd tumbler vim waybar duf
+    wdisplays wf-recorder wl-clipboard wlsunset cava cmatrix pipes.sh gimp vlc mpv hostctl
+    wtype xdg-desktop-portal xdg-desktop-portal-wlr xdg-user-dirs xdg-utils sshs lazysql lazyjournal
     xorg-server xorg-xinit xorg-xwayland zoxide zsh ntfs-3g cheese galculator obsidian
 )
 
