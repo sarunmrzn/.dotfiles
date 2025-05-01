@@ -5,25 +5,25 @@
         "format": "{name}",
         "show-special": true,
         "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
+            "urgent": " ",
+            "active": " ",
+            "default": " "
         }
     },
     "privacy": {
         "modules": [
-          {
-            "type": "screenshare",
-            "tooltip": true,
-          },
-          {
-            "type": "audio-out",
-            "tooltip": true,
-          },
-          {
-            "type": "audio-in",
-            "tooltip": true,
-          }
+            {
+                "type": "screenshare",
+                "tooltip": true
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true
+            }
         ]
     },
     "tray": {
@@ -33,25 +33,29 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [" ", " ", " "]
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -60,19 +64,19 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "Disconnected ⚠"
     },
     "backlight": {
-        "format": " {percent}%",
-        "tooltip": false,
+        "format": "  {percent}%",
+        "tooltip": false
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": "   {usage}%",
         "tooltip": true
     },
     "memory": {
-        "format": "  {}%",
-	"tooltip": true
+        "format": "   {}%",
+        "tooltip": true
     },
     "temperature": {
         "interval": 10,
@@ -86,30 +90,35 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
         "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{time}  {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ]
     },
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "  {:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d %I:%M %p}",
+        "format-alt": "  {:%Y-%m-%d}",
         "actions": {
-          "on-click-right": "mode"
+            "on-click-right": "mode"
         },
         "calendar": {
-          "mode": "month",
-          "mode-mon-col": 6,
-          "on-click-right": "mode",
-          "format": {
-            "months": "<span color='#b4befe'><b>{}</b></span>",
-            "weekdays": "<span color='#a6adc8' font='7'>{}</span>",
-            "today": "<span color='#39FF14'><b>{}</b></span>"
-          }
+            "mode": "month",
+            "mode-mon-col": 6,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#b4befe'><b>{}</b></span>",
+                "weekdays": "<span color='#a6adc8' font='7'>{}</span>",
+                "today": "<span color='#39FF14'><b>{}</b></span>"
+            }
         },
     }
-
 }

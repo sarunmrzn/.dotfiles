@@ -18,7 +18,7 @@ window#waybar {
 #privacy,
 #backlight,
 #idle_inhibitor {
-    padding: 0 8px;
+    padding: 0 6px;
     color: #ebdbb2; /* Gruvbox light text */
 }
 
