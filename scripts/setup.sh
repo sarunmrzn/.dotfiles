@@ -43,9 +43,8 @@ sudo groupadd -f docker
 sudo usermod -aG docker "${USER}"
 echo "→ Log out/in so you can run docker without sudo"
 
-echo "==> 8. Enable services: Docker, Bluetooth, auto-cpufreq"
+echo "==> 8. Enable services: Docker, Bluetooth"
 sudo systemctl enable --now bluetooth.service
-sudo systemctl enable --now auto-cpufreq.service
 
 echo "==> 9. SSH keys & config"
 SSH_DIR="${HOME_DIR}/.ssh"
