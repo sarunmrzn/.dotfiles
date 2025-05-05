@@ -23,6 +23,8 @@ client.urgent           #7f5b63 #7f5b63 #a3b8d4 #7f5b63 #7f5b63
 client.placeholder      #1d2021 #1d2021 #a3b8d4 #1d2021 #1d2021
 client.background       #101213
 
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 # System Tray and Utilities
 exec nm-applet & blueman-applet & swaync & waybar
 exec wl-paste -t text --watch clipman store --no-persist
