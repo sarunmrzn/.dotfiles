@@ -41,11 +41,15 @@ alias l='exa -l'          # List files in long format
 alias la='exa -la'         # List all files in long format
 alias lt='exa -T'          # Tree view
 alias lta='exa -lT'        # Tree view in long format
-alias lg='exa --git'       # Show git status
-alias lga='exa -la --git'  # Show all files with git status
+# alias lg='exa --git'       # Show git status
+# alias lga='exa -la --git'  # Show all files with git status
 
 alias dot='nvim ~/.dotfiles'
 alias mux='tmuxinator'
 alias pb='mux start pb'
 alias home='mux start home'
 alias notes='nvim ~/Documents/notes/'
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
