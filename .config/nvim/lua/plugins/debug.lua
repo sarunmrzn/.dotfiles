@@ -49,12 +49,10 @@ return {
 			end,
 			desc = "Debug: Set Breakpoint",
 		},
-		-- Fixed toggle function with error handling
 		{
 			"<F7>",
 			function()
 				local dapui = require("dapui")
-				-- Check if dapui is properly initialized
 				if dapui then
 					pcall(dapui.toggle)
 				end
@@ -66,6 +64,7 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 
+		-- Setup dapui first with explicit configuration
 		dapui.setup({
 			controls = {
 				enabled = true,
@@ -107,116 +106,54 @@ return {
 			automatic_installation = true,
 			handlers = {},
 			ensure_installed = {
+				"js-debug-adapter",
 				"node-debug2-adapter",
 			},
 		})
 
-		-- Node.js adapter configuration
-		dap.adapters["pwa-node"] = {
-			type = "server",
-			host = "localhost",
-			port = "${port}",
-			executable = {
+		-- Node.js adapter configuration using the correct mason API
+		local mason_registry = require("mason-registry")
+
+		-- Check if js-debug-adapter is installed and get its path
+		local function get_js_debug_adapter_path()
+			if mason_registry.is_installed("js-debug-adapter") then
+				local pkg = mason_registry.get_package("js-debug-adapter")
+				return pkg:get_install_path() .. "/js-debug/src/dapDebugServer.js"
+			end
+			return nil
+		end
+
+		-- Check if node-debug2-adapter is installed and get its path
+		local function get_node_debug2_adapter_path()
+			if mason_registry.is_installed("node-debug2-adapter") then
+				local pkg = mason_registry.get_package("node-debug2-adapter")
+				return pkg:get_install_path() .. "/out/src/nodeDebug.js"
+			end
+			return nil
+		end
+
+		-- Configure the node2 adapter (which is already working)
+		local node_debug2_path = get_node_debug2_adapter_path()
+		if node_debug2_path then
+			dap.adapters.node2 = {
+				type = "executable",
 				command = "node",
-				args = {
-					require("mason-registry").get_package("js-debug-adapter"):get_install_path()
-						.. "/js-debug/src/dapDebugServer.js",
-					"${port}",
-				},
-			},
-		}
+				args = { node_debug2_path },
+			}
+		else
+			-- Fallback if mason path doesn't work
+			dap.adapters.node2 = {
+				type = "executable",
+				command = "node",
+				args = { vim.fn.stdpath("data") .. "/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" },
+			}
+		end
 
-		-- Alternative adapter using node-debug2-adapter
-		dap.adapters.node2 = {
-			type = "executable",
-			command = "node",
-			args = {
-				require("mason-registry").get_package("node-debug2-adapter"):get_install_path()
-					.. "/out/src/nodeDebug.js",
-			},
-		}
-
-		-- Node.js configurations
-		dap.configurations.javascript = {
-			{
-				name = "Launch",
-				type = "pwa-node",
-				request = "launch",
-				program = "${file}",
-				cwd = "${workspaceFolder}",
-			},
-			{
-				name = "Launch (with arguments)",
-				type = "pwa-node",
-				request = "launch",
-				program = "${file}",
-				cwd = "${workspaceFolder}",
-				args = function()
-					local args_string = vim.fn.input("Arguments: ")
-					return vim.split(args_string, " ")
-				end,
-			},
-			{
-				name = "Attach",
-				type = "pwa-node",
-				request = "attach",
-				processId = require("dap.utils").pick_process,
-				cwd = "${workspaceFolder}",
-			},
-			{
-				name = "Launch Server (nodemon)",
-				type = "pwa-node",
-				request = "launch",
-				program = "${workspaceFolder}/server.js",
-				cwd = "${workspaceFolder}",
-				runtimeExecutable = "nodemon",
-				restart = true,
-				console = "integratedTerminal",
-				internalConsoleOptions = "neverOpen",
-			},
-			{
-				name = "Launch with npm start",
-				type = "pwa-node",
-				request = "launch",
-				cwd = "${workspaceFolder}",
-				runtimeExecutable = "npm",
-				runtimeArgs = { "start" },
-			},
-			{
-				name = "Attach to Remote",
-				type = "pwa-node",
-				request = "attach",
-				address = "localhost",
-				port = 9229,
-				localRoot = "${workspaceFolder}",
-				remoteRoot = "${workspaceFolder}",
-			},
-		}
-
-		-- TypeScript configurations
-		dap.configurations.typescript = {
-			{
-				name = "ts-node (launch)",
-				type = "pwa-node",
-				request = "launch",
-				cwd = "${workspaceFolder}",
-				runtimeExecutable = "node",
-				runtimeArgs = { "--loader", "ts-node/esm" },
-				program = "${file}",
-				console = "integratedTerminal",
-				internalConsoleOptions = "neverOpen",
-			},
-			{
-				name = "tsx (launch)",
-				type = "pwa-node",
-				request = "launch",
-				cwd = "${workspaceFolder}",
-				runtimeExecutable = "tsx",
-				program = "${file}",
-				console = "integratedTerminal",
-				internalConsoleOptions = "neverOpen",
-			},
-		}
+		-- Load launch.json configurations
+		require("dap.ext.vscode").load_launchjs(nil, {
+			["node"] = { "javascript", "typescript" },
+			["node2"] = { "javascript", "typescript" },
+		})
 
 		-- Set up dap listeners with error handling
 		dap.listeners.before.attach.dapui_config = function()
