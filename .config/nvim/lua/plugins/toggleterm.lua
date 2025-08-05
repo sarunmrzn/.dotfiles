@@ -8,7 +8,7 @@ return {
 			local lazygit = Terminal:new({
 				cmd = "lazygit",
 				dir = "git_dir",
-				direction = "float",
+				direction = "tab",
 				size = 20,
 				open_mapping = [[<c-\>]],
 				hide_numbers = true,
