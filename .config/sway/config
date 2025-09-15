@@ -10,10 +10,10 @@ set $term alacritty
 set $menu rofi -show drun
 set $browser brave
 
-set $wallpaper ~/Pictures/Wallpapers/wallhaven-968v28.jpg
+set $wallpaper ~/Pictures/Wallpapers/wallhaven-1pwez3.png
 
 # Theme and Appearance
-output * bg $wallpaper fill
+output * bg $wallpaper stretch
 
 # Window colors (Gruvbox Dark)
 client.focused          #2a2e35 #2a2e35 #a3b8d4 #2a2e35 #2a2e35
