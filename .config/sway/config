@@ -10,7 +10,7 @@ set $term alacritty
 set $menu rofi -show drun
 set $browser brave
 
-set $wallpaper ~/Pictures/Wallpapers/wallhaven-1pwez3.png
+set $wallpaper ~/Pictures/Wallpapers/38.jpg
 
 # Theme and Appearance
 output * bg $wallpaper stretch
